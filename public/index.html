@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ACBL Unit 112</title>
+<meta name="description" content="ACBL Unit 112: duplicate bridge tournaments, results and clubs across Central and Western New York.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1C4966">
+<link rel="canonical" href="/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ACBL Unit 112">
+<meta property="og:title" content="ACBL Unit 112">
+<meta property="og:description" content="Duplicate bridge tournaments, results and clubs across Central and Western New York.">
+<meta property="og:url" content="/">
+<meta property="og:image" content="/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,600;7..72,700;7..72,800&display=swap">
+<style>
+/* ACBL Unit 112 — site styles.
+   Colors, font and base size are CSS variables the admin panel rewrites at runtime. */
+:root {
+  color-scheme: light;
+  --primary: #1C4966;      /* Cayuga deep blue */
+  --secondary: #2F6B4F;    /* vineyard green */
+  --accent: #C08A2B;       /* autumn gold, used sparingly */
+  --bg: #F3F7F6;           /* lake mist */
+  --surface: #FFFFFF;
+  --text: #15232B;
+  --muted: #45565E;
+  --line: #C9D6D6;
+  --red-suit: #B3261E;
+  --on-primary: #FFFFFF;
+  --on-secondary: #FFFFFF;
+  --focus: #F2B632;
+  --base: 20px;
+  --font-body: "Atkinson Hyperlegible", "Verdana", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Literata", "Georgia", "Times New Roman", serif;
+  --radius: 10px;
+  --maxw: 1120px;
+}
+html { font-size: var(--base); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--font-body); font-size: 1rem; line-height: 1.6;
+}
+html.hc { --bg:#FFFFFF; --surface:#FFFFFF; --text:#000000; --muted:#1A1A1A; --line:#000000; --primary:#002B4D; --secondary:#00391F; }
+html.hc a { text-decoration-thickness: 3px; }
+
+.skip { position: absolute; left: -999px; top: 8px; background: var(--focus); color: #000; padding: .6rem 1rem; font-weight: 700; z-index: 99; border-radius: 6px; }
+.skip:focus { left: 16px; }
+:focus-visible { outline: 4px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+a { color: var(--primary); text-underline-offset: .18em; text-decoration-thickness: 2px; }
+a:hover { color: var(--secondary); }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; text-wrap: balance; color: var(--primary); margin: 0 0 .5em; }
+h1 { font-size: 2rem; font-weight: 700; }
+h2 { font-size: 1.5rem; font-weight: 650; }
+h3 { font-size: 1.2rem; font-weight: 650; }
+p { margin: 0 0 1em; max-width: 68ch; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: 16px; }
+@media (min-width: 700px) { .wrap { padding-inline: 28px; } }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.red { color: var(--red-suit); }
+
+/* ---------- Header ---------- */
+.topbar { background: var(--primary); color: var(--on-primary); font-size: .85rem; }
+.topbar .wrap { display:flex; flex-wrap:wrap; gap:.5rem 1.25rem; align-items:center; justify-content:space-between; padding-block:.45rem; }
+.topbar a { color: var(--on-primary); }
+.topbar .suits { color: var(--on-primary); }
+.topbar .suits .red { color: #FFB4AB; }
+html.hc .topbar .suits .red { color: #FFFFFF; }
+.textsize { display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; }
+.textsize button { font: inherit; font-weight:700; min-width:2.6rem; min-height:2.4rem; border-radius:6px; border:2px solid rgba(255,255,255,.55); background:transparent; color: var(--on-primary); cursor:pointer; }
+.textsize button[aria-pressed="true"] { background: var(--on-primary); color: var(--primary); border-color: var(--on-primary); }
+.masthead { background: var(--surface); border-bottom: 5px solid var(--secondary); }
+.masthead.band { background: linear-gradient(180deg, var(--surface), var(--bg)); }
+.masthead .wrap { display:flex; gap:1rem 1.25rem; align-items:center; padding-block:1.1rem; flex-wrap:wrap; }
+.masthead.center .wrap { justify-content:center; text-align:center; flex-direction:column; }
+.brand { display:flex; gap:1rem; align-items:center; text-decoration:none; color:inherit; }
+.masthead.center .brand { flex-direction:column; }
+.brand img { max-height: 84px; width:auto; }
+.mark { width:78px; height:78px; border-radius: 14px; background: var(--primary); color: var(--on-primary); display:grid; place-items:center; font-family: var(--font-display); font-weight:800; font-size:1.55rem; line-height:1; flex:none; position:relative; }
+.mark small { display:block; font-family: var(--font-body); font-size:.62rem; letter-spacing:.12em; font-weight:700; margin-top:.2rem; opacity:.9; }
+.brand-name { font-family: var(--font-display); font-size: 1.75rem; font-weight: 750; color: var(--primary); line-height:1.1; }
+.brand-tag { color: var(--muted); font-size: 1rem; margin-top:.25rem; }
+.suits { letter-spacing:.35em; font-size:.95rem; color: var(--text); }
+
+nav.main { background: var(--secondary); }
+nav.main ul { list-style:none; margin:0; padding:.5rem 0; display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:.4rem; }
+@media (min-width: 760px) { nav.main ul { display:flex; flex-wrap:wrap; } }
+nav.main a { display:flex; align-items:center; justify-content:center; text-align:center; min-height: 3rem; padding:.35rem 1rem; color: var(--on-secondary); text-decoration:none; font-weight:700; border-radius: 8px; line-height:1.25; }
+nav.main a:hover { background: rgba(127,127,127,.22); color: var(--on-secondary); }
+nav.main a[aria-current="page"] { background: var(--surface); color: var(--secondary); }
+
+#adminbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; }
+.adminbar { background:#FFF4D6; color:#3B2A00; border-bottom:2px solid var(--accent); font-size:.9rem; }
+.adminbar .wrap { display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:center; padding-block:.5rem; }
+.adminbar strong { margin-right:auto; }
+
+/* ---------- Main ---------- */
+main { padding-block: 1.75rem 3rem; }
+.page-head { margin-bottom: 1.25rem; }
+.page-head p { color: var(--muted); font-size: 1.05rem; }
+.stack { display:grid; gap: 1.5rem; }
+.panel { background: var(--surface); border:1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; }
+@media (min-width:700px){ .panel { padding: 1.5rem 1.75rem; } }
+.grid2 { display:grid; gap:1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+.muted { color: var(--muted); }
+.lead { font-size: 1.12rem; }
+
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; min-height: 3rem; padding: .5rem 1.15rem; border-radius: 8px; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; border: 2px solid var(--primary); background: var(--primary); color: var(--on-primary); line-height:1.2; text-align:center; }
+.btn:hover { filter: brightness(1.12); color: var(--on-primary); }
+.btn.alt { background: var(--surface); color: var(--primary); }
+.btn.alt:hover { background: var(--bg); color: var(--primary); filter:none; }
+.btn.green { background: var(--secondary); border-color: var(--secondary); }
+.btn.small { min-height: 2.4rem; padding:.3rem .8rem; font-size:.9rem; }
+.btn.danger { background:#fff; color:#9B1C1C; border-color:#9B1C1C; }
+.btn[disabled] { opacity:.45; cursor:not-allowed; }
+.btnrow { display:flex; flex-wrap:wrap; gap:.6rem; }
+
+/* Feature: next tournament */
+.feature { background: var(--primary); color: var(--on-primary); border-radius: var(--radius); padding: 1.5rem; display:grid; gap:1rem 2rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .feature { grid-template-columns: auto 1fr auto; align-items:center; padding: 1.75rem 2rem; } }
+.feature h2 { color: var(--on-primary); margin:0 0 .25rem; }
+.feature .count { text-align:center; border:2px solid rgba(255,255,255,.4); border-radius: 10px; padding:.6rem 1rem; min-width: 7rem; }
+.feature .count b { display:block; font-family: var(--font-display); font-size: 2.4rem; line-height:1; }
+.feature .btn { background: var(--surface); color: var(--primary); border-color: var(--surface); }
+.feature .btn.alt { background: transparent; color: var(--on-primary); border-color: rgba(255,255,255,.7); }
+.eyebrow { text-transform: uppercase; letter-spacing:.1em; font-size:.8rem; font-weight:700; opacity:.9; }
+
+/* Tournament list */
+.tlist { display:grid; gap: 1rem; }
+.tcard { background: var(--surface); border:1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.25rem; display:grid; gap: .75rem 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .tcard { grid-template-columns: 8.5rem 1fr auto; align-items:center; } }
+.tdate { font-family: var(--font-display); color: var(--primary); font-weight: 700; line-height:1.2; }
+.tdate .mo { display:block; text-transform:uppercase; letter-spacing:.08em; font-size:.85rem; color: var(--secondary); font-family: var(--font-body); }
+.tdate .d { font-size: 1.45rem; }
+.tcard h3 { margin: 0 0 .2rem; }
+.tmeta { color: var(--muted); font-size: .95rem; }
+.pill { display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:.15rem .55rem; border-radius: 999px; border:2px solid currentColor; margin-right:.4rem; vertical-align: .1em; }
+.pill.live { color:#fff; background:#B3261E; border-color:#B3261E; }
+.pill.up { color: var(--secondary); }
+.pill.past { color: var(--muted); }
+
+/* Clubs */
+.clubs { display:grid; gap:1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+.club { background: var(--surface); border:1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+.club h3 { margin:0; }
+.club .btnrow { margin-top:auto; padding-top:.4rem; }
+.club dl { margin:0; display:grid; grid-template-columns: auto 1fr; gap:.15rem .75rem; font-size:.95rem; }
+.club dt { font-weight:700; color: var(--muted); }
+.club dd { margin:0; }
+
+/* Tables & lists */
+.tablewrap { overflow-x:auto; }
+table { border-collapse: collapse; width:100%; font-variant-numeric: tabular-nums; }
+th, td { text-align:left; padding:.6rem .75rem; border-bottom:1px solid var(--line); vertical-align: top; }
+th { color: var(--primary); font-size:.9rem; text-transform:uppercase; letter-spacing:.05em; }
+.news { display:grid; gap: 1rem; }
+.news article { border-left: 5px solid var(--secondary); padding: .25rem 0 .25rem 1rem; }
+.news time { color: var(--muted); font-size:.9rem; font-weight:700; }
+.news h3 { margin:.1rem 0 .35rem; }
+.rich ul { padding-left: 1.3rem; margin: 0 0 1em; }
+.rich li { margin-bottom:.35rem; }
+.rich h2 { margin-top: 1.25rem; }
+.empty { color: var(--muted); font-style: italic; }
+.quick { display:grid; gap:.6rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+.quick a { display:block; padding:.75rem 1rem; border:2px solid var(--line); border-radius:8px; text-decoration:none; font-weight:700; background: var(--surface); }
+.quick a:hover { border-color: var(--primary); }
+.quick a span { display:block; font-weight:400; color: var(--muted); font-size:.88rem; }
+
+footer.site { background: var(--primary); color: var(--on-primary); padding-block: 2rem; font-size: .95rem; }
+footer.site a { color: var(--on-primary); }
+footer.site .cols { display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+footer.site h2 { color: var(--on-primary); font-size:1.1rem; }
+footer.site ul { list-style:none; padding:0; margin:0; display:grid; gap:.35rem; }
+.partner-logos { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
+.partner-logos img { max-height:56px; background:#fff; border-radius:6px; padding:4px; }
+
+/* ---------- Admin ---------- */
+.admin { display:grid; gap:1.25rem; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .admin { grid-template-columns: 15rem 1fr; align-items:start; } }
+.admin-tabs { display:grid; gap:.35rem; grid-template-columns: repeat(2, minmax(0,1fr)); }
+@media (min-width: 900px) { .admin-tabs { grid-template-columns: 1fr; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 5rem); } }
+.admin-tabs button { font: inherit; text-align:left; padding:.65rem .9rem; min-height:3rem; border-radius:8px; border:2px solid var(--line); background: var(--surface); color: var(--text); cursor:pointer; font-weight:700; }
+.admin-tabs button[aria-selected="true"] { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.form { display:grid; gap: 1rem; }
+.field { display:grid; gap:.3rem; }
+.field > label, .field > .lbl { font-weight:700; }
+.field .help { font-size:.85rem; color: var(--muted); }
+.field input[type=text], .field input[type=url], .field input[type=email], .field input[type=date], .field input[type=password], .field input[type=number], .field select, .field textarea {
+  font: inherit; font-size: .95rem; padding: .6rem .7rem; border:2px solid var(--line); border-radius: 8px; background:#fff; color:#111; width:100%; box-sizing:border-box; min-height: 2.9rem;
+}
+.field textarea { min-height: 8rem; resize: vertical; line-height:1.5; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--primary); }
+.field.check { display:flex; align-items:center; gap:.6rem; }
+.field.check input { width:1.4rem; height:1.4rem; }
+.row2 { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+.item { border:2px solid var(--line); border-radius: 10px; background: var(--surface); }
+.item > summary { list-style:none; cursor:pointer; padding:.8rem 1rem; display:flex; gap:.75rem; align-items:center; font-weight:700; min-height:3rem; }
+.item > summary::-webkit-details-marker { display:none; }
+.item > summary::before { content:"▸"; color: var(--secondary); }
+.item[open] > summary::before { content:"▾"; }
+.item > summary .sub { font-weight:400; color: var(--muted); font-size:.88rem; margin-left:auto; text-align:right; }
+.item .body { padding: 0 1rem 1rem; display:grid; gap:1rem; }
+.item-tools { display:flex; flex-wrap:wrap; gap:.5rem; border-top:1px solid var(--line); padding-top:.8rem; }
+.derived { background: var(--bg); border-radius:8px; padding:.6rem .8rem; font-size:.88rem; word-break: break-all; }
+.swatches { display:grid; gap:.75rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); }
+.swatch { display:flex; gap:.6rem; align-items:center; border:2px solid var(--line); border-radius:8px; padding:.4rem .6rem; background:#fff; }
+.swatch input[type=color] { width:3rem; height:2.4rem; border:0; padding:0; background:none; cursor:pointer; }
+.swatch label { font-weight:700; font-size:.9rem; color:#111; }
+.swatch code { display:block; font-size:.78rem; color:#555; }
+.presets { display:flex; flex-wrap:wrap; gap:.6rem; }
+.preset { display:flex; align-items:center; gap:.5rem; font:inherit; font-size:.9rem; font-weight:700; padding:.45rem .8rem; border-radius:8px; border:2px solid var(--line); background:#fff; color:#111; cursor:pointer; min-height:2.8rem; }
+.preset i { display:inline-block; width:1rem; height:1rem; border-radius:50%; }
+.orderlist { list-style:none; padding:0; margin:0; display:grid; gap:.5rem; }
+.orderlist li { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; border:2px solid var(--line); border-radius:8px; padding:.5rem .7rem; background:#fff; }
+.orderlist li input[type=text] { flex:1 1 12rem; font:inherit; font-size:.95rem; padding:.4rem .6rem; border:2px solid var(--line); border-radius:6px; min-height:2.5rem; }
+.orderlist .tag { font-size:.75rem; color: var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+.imgprev { max-height: 90px; max-width: 100%; border:1px dashed var(--line); border-radius:6px; padding:4px; background:#fff; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); background:#12312A; color:#fff; padding:.8rem 1.2rem; border-radius:10px; font-weight:700; z-index:50; box-shadow:0 6px 20px rgba(0,0,0,.25); max-width: calc(100% - 32px); }
+.notice { border:2px solid var(--accent); background:#FFF8E6; color:#3B2A00; border-radius:8px; padding:.75rem 1rem; }
+.notice p { margin:0; }
+.login { max-width: 30rem; margin: 0 auto; }
+.confirm { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; background:#FDECEC; color:#6B1111; border-radius:8px; padding:.5rem .75rem; font-weight:700; }
+@media (prefers-reduced-motion: no-preference) { .btn, nav.main a, .quick a { transition: background-color .15s, border-color .15s, filter .15s; } }
+
+/* ---------- Urgent notice banner ---------- */
+.sitealert { font-size: 1.05rem; border-bottom: 3px solid rgba(0,0,0,.25); }
+.sitealert .wrap { padding-block: .8rem; }
+.sitealert.urgent { background: #9B1C1C; color: #fff; }
+.sitealert.warning { background: #FCD34D; color: #1F1400; }
+.sitealert.info { background: #DCEBF7; color: #0B2540; }
+.sitealert a { color: inherit; font-weight: 700; }
+
+/* ---------- Search ---------- */
+.sitesearch { display: flex; gap: .5rem; flex: 1 1 min(100%, 18rem); max-width: 26rem; margin-left: auto; }
+.masthead.center .sitesearch { margin: 0 auto; }
+.sitesearch input { flex: 1; min-width: 0; font: inherit; font-size: .95rem; padding: .55rem .75rem; border: 2px solid var(--line); border-radius: 8px; min-height: 3rem; background: #fff; color: #111; }
+.sitesearch input:focus { border-color: var(--primary); }
+.sitesearch.big { max-width: 40rem; margin: 0 0 1.25rem; }
+.results { padding-left: 1.4rem; display: grid; gap: 1rem; }
+.results a { font-weight: 700; font-size: 1.1rem; }
+.results p { margin: .25rem 0 0; color: var(--muted); }
+
+/* ---------- Games / day filter ---------- */
+.games { list-style: none; padding: 0; margin: 0; display: grid; gap: .35rem; }
+.games li { padding: .35rem .6rem; border-radius: 6px; background: var(--bg); }
+.games li.today { background: #E3F1E8; }
+html.hc .games li.today { background: #fff; outline: 2px solid #000; }
+.grid2 h3 { margin-bottom: .5rem; }
+.dayfilter { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.25rem; }
+.dayfilter button { font: inherit; font-size: .92rem; font-weight: 700; min-height: 2.9rem; padding: .3rem .9rem; border-radius: 999px; border: 2px solid var(--primary); background: var(--surface); color: var(--primary); cursor: pointer; }
+.dayfilter button[aria-pressed="true"] { background: var(--primary); color: var(--on-primary); }
+
+/* ---------- Email sign-up ---------- */
+.signup { display: grid; gap: .8rem; grid-template-columns: 1fr; max-width: 44rem; }
+@media (min-width: 760px) { .signup { grid-template-columns: 1.3fr 1fr auto; align-items: end; } }
+.signup-panel { border-top: 5px solid var(--secondary); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.formerr { color: #9B1C1C; font-weight: 700; margin: .75rem 0 0; }
+.formok { color: var(--secondary); font-weight: 700; font-size: 1.1rem; margin: .5rem 0 0; }
+
+/* ---------- Photos ---------- */
+.photos { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); }
+.photos li { display: grid; gap: .3rem; font-size: .9rem; color: var(--muted); }
+.photo { padding: 0; border: 2px solid var(--line); border-radius: 8px; overflow: hidden; cursor: zoom-in; background: var(--bg); aspect-ratio: 4 / 3; max-width: 100%; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo:hover { border-color: var(--primary); }
+.lightbox { position: fixed; inset: 0; z-index: 60; background: rgba(8, 14, 18, .94); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .8rem; padding: calc(env(safe-area-inset-top, 0px) + 16px) 16px calc(env(safe-area-inset-bottom, 0px) + 16px); }
+.lightbox img { max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 6px; }
+.lightbox p { margin: 0; font-size: 1.1rem; text-align: center; }
+.lb-bar { display: flex; gap: 1rem; justify-content: space-between; align-items: center; width: 100%; max-width: 60rem; }
+.lightbox .btn { background: #fff; color: #111; border-color: #fff; }
+.lightbox .btn.alt { background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
+
+/* ---------- Admin additions ---------- */
+.sep { border-top: 2px solid var(--line); padding-top: 1rem; }
+.sep h3 { margin-bottom: .2rem; }
+.sublist { border: 2px dashed var(--line); border-radius: 8px; padding: .8rem; margin: 0; display: grid; gap: .6rem; }
+.sublist legend { padding: 0 .4rem; }
+.subrows { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; }
+.subrows li { display: grid; gap: .6rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); align-items: end; background: var(--bg); padding: .6rem; border-radius: 8px; }
+.subrows .field.wide { grid-column: span 2; }
+@media (max-width: 520px) { .subrows .field.wide { grid-column: auto; } }
+.photoedit { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+.photoedit li { display: grid; gap: .5rem; background: var(--bg); padding: .6rem; border-radius: 8px; }
+.photoedit img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+.checks { display: grid; gap: .4rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+.checks label { display: flex; gap: .5rem; align-items: center; font-weight: 400; }
+.checks input { width: 1.3rem; height: 1.3rem; }
+fieldset.field { border: 0; padding: 0; margin: 0; }
+fieldset.sublist { border: 2px dashed var(--line); padding: .8rem; }
+.tcard h3 a { color: var(--primary); }
+
+.suggestions { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; }
+.suggestions .panel { padding: 1rem 1.25rem; }
+.fontsample { border: 2px dashed var(--line); border-radius: 8px; padding: .8rem 1rem; background: var(--surface); }
+.fontsample .fs-h { font-family: var(--font-display); color: var(--primary); font-size: 1.4rem; font-weight: 700; margin-bottom: .3rem; }
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-act="skip">Skip to main content</a>
+<div id="adminbar"></div>
+<div id="alert"></div>
+<header>
+  <div class="topbar" id="topbar"></div>
+  <div class="masthead" id="masthead"></div>
+  <nav class="main" id="nav" aria-label="Main menu"></nav>
+</header>
+<main id="main" tabindex="-1"><div class="wrap" id="view"><p>Loading…</p></div></main>
+<footer class="site" id="footer"></footer>
+<div id="lb"></div>
+<noscript><p style="padding:16px;font-size:20px">This site needs JavaScript turned on. Unit 112 results are also at <a href="https://live.acbl.org">live.acbl.org</a>.</p></noscript>
+<script>
+/* Starting content for the Unit 112 site. Once the webmaster saves from the admin panel,
+   the saved copy (on the server, or in this browser in demo mode) replaces this. */
+window.DEFAULT_SITE = {
+  version: 1,
+  settings: {
+    siteName: "ACBL Unit 112",
+    tagline: "Duplicate bridge across Central & Western New York",
+    logo: "",
+    logoAlt: "ACBL Unit 112 logo",
+    favicon: "",
+    headerStyle: "left",
+    showSuits: true,
+    font: "atkinson",
+    headingFont: "literata",
+    baseSize: 20,
+    colors: { primary: "#1C4966", secondary: "#2F6B4F", accent: "#C08A2B", bg: "#F3F7F6", surface: "#FFFFFF", text: "#15232B" },
+    footerText: "ACBL Unit 112 is a unit of District 4 of the American Contract Bridge League.",
+    contactEmail: "",
+    showSuggest: true,
+    alert: { on: false, level: "urgent", text: "", link: "", until: "" },
+    partnerLinks: [
+      { id: "p1", name: "American Contract Bridge League", url: "https://www.acbl.org", img: "" },
+      { id: "p2", name: "ACBL District 4", url: "https://4acbl.org", img: "" }
+    ],
+    homeSections: [
+      { id: "welcome", label: "Welcome message", show: true },
+      { id: "next", label: "Next tournament (with countdown)", show: true },
+      { id: "today", label: "Club games today and tomorrow", show: true },
+      { id: "results", label: "Latest tournament results", show: true },
+      { id: "news", label: "News & announcements", show: true },
+      { id: "clubs", label: "Club results quick links", show: true },
+      { id: "signup", label: "Email reminder sign-up", show: true }
+    ]
+  },
+  pages: [
+    { id: "home", title: "Home", show: true, builtIn: true },
+    { id: "tournaments", title: "Tournaments & Results", show: true, builtIn: true },
+    { id: "clubs", title: "Clubs", show: true, builtIn: true },
+    { id: "newplayers", title: "New Players", show: true, builtIn: true },
+    { id: "learn", title: "Learn to Play", show: true, builtIn: true },
+    { id: "recognition", title: "Player Recognition", show: true, builtIn: true },
+    { id: "gallery", title: "Photos", show: true, builtIn: true },
+    { id: "about", title: "About the Unit", show: true, builtIn: true },
+    { id: "documents", title: "Board Documents", show: true, builtIn: true },
+    { id: "contact", title: "Contact", show: true, builtIn: true }
+  ],
+  content: {
+    welcomeTitle: "Welcome to ACBL Unit 112",
+    welcome: "Unit 112 of the American Contract Bridge League serves duplicate bridge players from Rochester, Canandaigua and Geneseo to Syracuse, Oswego, Ithaca, Elmira, Vestal and the Mohawk Valley.\n\nWe run sectional tournaments, support our local clubs, and welcome players at every level, from your first game to your gold points.",
+    tournamentsIntro: "Sectional tournaments and district events in and around Unit 112. Results links appear automatically once a tournament begins.",
+    clubsIntro: "Find a game near you. Each club posts results to ACBL Live for Clubs, and most also post Common Game hand records and analysis.",
+    newplayers: "## New to duplicate bridge?\nYou are welcome at any of our clubs. Most clubs run games for newer players, and directors are happy to help you find a partner.\n\n## Free play for new members\nThe unit offers **free play certificates** for new ACBL members and for players who reach new ranks. Ask your club director or a board member how to get yours.\n\n## Your first sectional\nSectionals are one- or two-day tournaments. Many have events just for newer players, such as **Non-Life Master** and **499er** games, where you play against people at your own level and earn silver points.\n\n## Useful links\n- [Join the ACBL or renew your membership](https://www.acbl.org)\n- [Check your masterpoints on MyACBL](https://my.acbl.org)\n- [District 4 tournaments and news](https://4acbl.org)",
+    recognitionIntro: "Congratulations to Unit 112 players on their achievements. Club directors and players can send milestones to the webmaster.",
+    about: "Unit 112 is one of the units in ACBL District 4. The unit's board organizes sectional tournaments, supports member clubs, promotes the game, and recognizes player achievements.\n\nBoard meetings are open to unit members. Minutes and other board documents are posted on the Board Documents page.",
+    documentsIntro: "Bylaws, meeting minutes, financial reports and other board documents.",
+    learn: "Bridge is a card game for four players in two partnerships. It is easy to start and takes a lifetime to master. Lessons are the fastest way in: you learn the basics with other beginners and play your first hands with a teacher nearby.",
+    galleryIntro: "Photos from Unit 112 tournaments, club games and celebrations.",
+    signupTitle: "Get tournament reminders by email",
+    signupText: "We send a short email before each sectional in the unit. No more than a few a month. Unsubscribe any time.",
+    suggestTitle: "Suggest a change to the website",
+    suggestText: "Spotted a mistake, or have an idea to make the site easier to use? Tell the webmaster here.",
+    contact: "Questions about the unit, a tournament or this website? Contact any board member listed below, or ask the director at your club.\n\nTo report a problem with the website or suggest a change, use the form below."
+  },
+  news: [
+    { id: "n1", date: "2026-09-23", title: "Welcome to the new Unit 112 website", body: "The unit's website has a new look with larger text and simpler menus. Use the **A A A** buttons at the top of any page to make the text bigger.", pinned: true, expires: "" },
+    { id: "n2", date: "2026-09-06", title: "Rochester I/N Sectional results are posted", body: "Results from the September 4–5 Rochester Intermediate/Novice Sectional are on the Tournaments & Results page.", pinned: false, expires: "" }
+  ],
+  tournaments: [
+    { id: "t1", name: "Rochester I/N Sectional", type: "Sectional", start: "2026-09-04", end: "2026-09-05", city: "Rochester", venue: "", sanction: "2609380", flyerUrl: "", resultsUrl: "", notes: "Intermediate/Novice sectional", address: "", sessions: [], hotels: "", food: "", parking: "", partnership: "", contacts: "", details: "", bulletins: [] },
+    { id: "t2", name: "Oswego Non-Life Master / 499er Sectional", type: "Sectional", start: "2026-09-19", end: "2026-09-19", city: "Oswego", venue: "", sanction: "2609350", flyerUrl: "", resultsUrl: "", notes: "", address: "", sessions: [], hotels: "", food: "", parking: "", partnership: "", contacts: "", details: "", bulletins: [] },
+    { id: "t3", name: "NAP Flight B District Finals", type: "NAP", start: "2026-10-03", end: "2026-10-03", city: "Canandaigua", venue: "", sanction: "", flyerUrl: "https://4acbl.org/wp-content/uploads/2026/08/NAP-26-B-Canandaigua-Registration.pdf", resultsUrl: "", notes: "North American Pairs, Flight B", address: "", sessions: [], hotels: "", food: "", parking: "", partnership: "", contacts: "", details: "", bulletins: [] },
+    { id: "t4", name: "Rochester Fall Sectional", type: "Sectional", start: "2026-10-10", end: "2026-10-11", city: "Rochester", venue: "", sanction: "2610314", flyerUrl: "", resultsUrl: "", notes: "", address: "", sessions: [], hotels: "", food: "", parking: "", partnership: "", contacts: "", details: "", bulletins: [] },
+    { id: "t5", name: "NAP Flight C District Finals", type: "NAP", start: "2026-10-24", end: "2026-10-24", city: "Canandaigua", venue: "", sanction: "", flyerUrl: "https://4acbl.org/wp-content/uploads/2026/08/NAP-26-C-Canandaigua-Registration.pdf", resultsUrl: "", notes: "North American Pairs, Flight C", address: "", sessions: [], hotels: "", food: "", parking: "", partnership: "", contacts: "", details: "", bulletins: [] },
+    { id: "t6", name: "NAP Flight C District Finals", type: "NAP", start: "2026-10-24", end: "2026-10-24", city: "Elmira", venue: "", sanction: "", flyerUrl: "https://4acbl.org/wp-content/uploads/2026/08/NAP-26-C-Elmira-Registration.pdf", resultsUrl: "", notes: "North American Pairs, Flight C", address: "", sessions: [], hotels: "", food: "", parking: "", partnership: "", contacts: "", details: "", bulletins: [] },
+    { id: "t7", name: "Finger Lakes Sectional", type: "Sectional", start: "2026-11-07", end: "2026-11-08", city: "", venue: "", sanction: "2611312", flyerUrl: "", resultsUrl: "", notes: "", address: "", sessions: [], hotels: "", food: "", parking: "", partnership: "", contacts: "", details: "", bulletins: [] }
+  ],
+  clubs: [
+    { id: "c1", name: "Canandaigua", city: "Canandaigua", clubNumber: "128595", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [] },
+    { id: "c2", name: "Elmira (Wednesday)", city: "Elmira", clubNumber: "255059", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [{ day: "Wed", time: "", label: "" }] },
+    { id: "c3", name: "Elmira (Friday)", city: "Elmira", clubNumber: "272633", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [{ day: "Fri", time: "", label: "" }] },
+    { id: "c4", name: "Geneseo", city: "Geneseo", clubNumber: "213629", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [] },
+    { id: "c5", name: "Ithaca", city: "Ithaca", clubNumber: "117465", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [] },
+    { id: "c6", name: "Mohawk Valley", city: "Mohawk Valley", clubNumber: "202135", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: true, games: [] },
+    { id: "c7", name: "Oswego", city: "Oswego", clubNumber: "120279", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [] },
+    { id: "c8", name: "Rochester", city: "Rochester", clubNumber: "227546", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [] },
+    { id: "c9", name: "Greater Rochester", city: "Rochester", clubNumber: "218065", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [] },
+    { id: "c10", name: "Syracuse", city: "Syracuse", clubNumber: "145870", schedule: "", address: "", contact: "", website: "", liveUrl: "", tcgUrl: "", noTcg: false, games: [] },
+    { id: "c11", name: "Vestal", city: "Vestal", clubNumber: "223479", schedule: "", address: "", contact: "", website: "", liveUrl: "https://my.acbl.org/club-results/details/1361353", tcgUrl: "", noTcg: false, games: [] }
+  ],
+  board: [
+    { id: "b1", name: "Betty Youmans", role: "President", email: "" },
+    { id: "b2", name: "Noah Bell", role: "Webmaster", email: "" }
+  ],
+  documents: [],
+  learn: {
+    teachers: [],
+    resources: [
+      { id: "l1", title: "ACBL: Learn to play bridge", url: "https://www.acbl.org/learn/" },
+      { id: "l2", title: "Free Learn to Play Bridge software (ACBL)", url: "https://web3.acbl.org/newmembers/free-learn-software" },
+      { id: "l3", title: "ACBL bridge lesson library", url: "https://www.acbl.org/cg-lessons/" },
+      { id: "l4", title: "Play online at Bridge Base Online", url: "https://www.bridgebase.com" }
+    ]
+  },
+  gallery: [],
+  recognition: {
+    lifeMasters: [],
+    milestones: [],
+    links: [
+      { id: "r1", title: "Ace of Clubs and Mini-McKenney standings (ACBL)", url: "https://www.acbl.org/masterpoints/" }
+    ]
+  }
+};
+
+</script>
+<script>
+/* ACBL Unit 112 website — public pages + webmaster admin panel.
+   One file, no build step. Content lives in a single JSON object ("site").
+   Live mode: loads/saves through /api/* (Cloudflare Pages Functions, see /functions).
+   Demo mode: when no /api is present, saves go to this browser's localStorage. */
+(function () {
+  'use strict';
+
+  // ---------- small helpers ----------
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const clone = (o) => JSON.parse(JSON.stringify(o));
+  const uid = (p) => p + Math.random().toString(36).slice(2, 9);
+  const safe = (fn, fb) => { try { return fn(); } catch (e) { return fb; } };
+  const ls = {
+    get: (k) => safe(() => localStorage.getItem(k), null),
+    set: (k, v) => safe(() => { localStorage.setItem(k, v); return true; }, false),
+    del: (k) => safe(() => localStorage.removeItem(k)),
+  };
+  const ss = {
+    get: (k) => safe(() => sessionStorage.getItem(k), null),
+    set: (k, v) => safe(() => sessionStorage.setItem(k, v)),
+    del: (k) => safe(() => sessionStorage.removeItem(k)),
+  };
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const MON = MONTHS.map((m) => m.slice(0, 3));
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const parseDate = (s) => { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || ''); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; };
+  const today = () => { const d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); };
+  const todayISO = () => { const d = today(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+  const fmtDate = (s) => { const d = parseDate(s); return d ? MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear() : ''; };
+  function fmtRange(a, b) {
+    const s = parseDate(a), e = parseDate(b) || s;
+    if (!s) return 'Date to be announced';
+    if (+s === +e) return DAYS[s.getDay()] + ', ' + MONTHS[s.getMonth()] + ' ' + s.getDate() + ', ' + s.getFullYear();
+    if (s.getMonth() === e.getMonth()) return MONTHS[s.getMonth()] + ' ' + s.getDate() + '–' + e.getDate() + ', ' + s.getFullYear();
+    return MON[s.getMonth()] + ' ' + s.getDate() + ' – ' + MON[e.getMonth()] + ' ' + e.getDate() + ', ' + e.getFullYear();
+  }
+  const daysBetween = (a, b) => Math.round((b - a) / 86400000);
+  const DAY_KEYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  function fmtTime(t) {
+    const m = /^(\d{1,2}):(\d{2})/.exec(t || ''); if (!m) return '';
+    let h = +m[1]; const ap = h >= 12 ? 'pm' : 'am'; h = h % 12 || 12;
+    return h + (m[2] === '00' ? '' : ':' + m[2]) + ' ' + ap;
+  }
+  const mapsUrl = (q) => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+  const validEmail = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(e || '').trim());
+
+  // ---------- state ----------
+  const DEMO_PASSWORD = 'unit112';
+  const LS_SITE = 'unit112-site-demo';
+  let site = null;
+  let mode = 'demo';          // 'live' when /api/site answers
+  const LS_USERS = 'unit112-users-demo';
+  const LS_SUBS = 'unit112-subs-demo';
+  const LS_SUGG = 'unit112-suggestions-demo';
+  const LS_SUGG_TO = 'unit112-suggest-to-demo';
+  const DEFAULT_SUGGEST_TO = 'noahbellbridge@gmail.com';
+  let token = ss.get('u112-token');
+  let user = safe(() => JSON.parse(ss.get('u112-user')), null); // {username, name, role, clubs, tournaments}
+  let dirty = false;
+  let clubDay = 'all';        // Clubs page day filter
+  let searchQuery = '';
+  let lightbox = null;        // {album, i}
+  const fullAccess = () => !!user && (user.role === 'owner' || user.role === 'editor');
+  const isOwner = () => !!user && user.role === 'owner';
+  let adminTab = 'branding';
+  let pendingDelete = null;   // "listPath|index" awaiting inline confirm
+  let pendingConfirm = null;  // e.g. 'reset', 'import'
+
+  // ---------- backend ----------
+  const backend = {
+    async load() {
+      try {
+        const r = await fetch('/api/site', { cache: 'no-store' });
+        const ct = r.headers.get('content-type') || '';
+        if (r.ok && ct.includes('application/json')) {
+          mode = 'live';
+          const j = await r.json();
+          return j && j.settings ? j : clone(window.DEFAULT_SITE);
+        }
+      } catch (e) { /* no API: demo mode */ }
+      mode = 'demo';
+      const raw = ls.get(LS_SITE);
+      if (raw) { const j = safe(() => JSON.parse(raw), null); if (j && j.settings) return j; }
+      return clone(window.DEFAULT_SITE);
+    },
+    async login(username, pw) {
+      username = (username || 'webmaster').trim().toLowerCase();
+      if (mode === 'live') {
+        const r = await fetch('/api/login', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ username, password: pw }) });
+        if (r.status === 429) throw new Error('Too many tries. Wait 15 minutes, then try again.');
+        if (!r.ok) return false;
+        const j = await r.json();
+        token = j.token; user = j.user;
+      } else {
+        const u = demoUsers().find((x) => x.username === username && x.password === pw);
+        if (!u) return false;
+        token = 'demo'; user = { username: u.username, name: u.name, role: u.role, clubs: u.clubs || [], tournaments: u.tournaments || [] };
+      }
+      ss.set('u112-token', token); ss.set('u112-user', JSON.stringify(user));
+      return true;
+    },
+    // ---- editor accounts (webmaster only) ----
+    async listUsers() {
+      if (mode !== 'live') return demoUsers().map((u) => Object.assign({}, u, { password: undefined }));
+      const r = await this._auth('/api/users'); return (await r.json()).users || [];
+    },
+    async saveUser(u) {
+      if (mode !== 'live') {
+        const all = demoUsers(), i = all.findIndex((x) => x.username === u.username);
+        const prev = i >= 0 ? all[i] : {};
+        if (i < 0 && !u.password) throw new Error('Give the new account a password.');
+        const rec = Object.assign({}, prev, u, { password: u.password || prev.password });
+        if (i >= 0) all[i] = rec; else all.push(rec);
+        ls.set(LS_USERS, JSON.stringify(all.filter((x) => x.username !== 'webmaster'))); return;
+      }
+      const r = await this._auth('/api/users', { method: 'POST', body: JSON.stringify(u) });
+      if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || 'The account was not saved.');
+    },
+    async deleteUser(username) {
+      if (mode !== 'live') { ls.set(LS_USERS, JSON.stringify(demoUsers().filter((x) => x.username !== username && x.username !== 'webmaster'))); return; }
+      await this._auth('/api/users?u=' + encodeURIComponent(username), { method: 'DELETE' });
+    },
+    // ---- email reminders ----
+    async subscribe(email, name, trap) {
+      if (mode !== 'live') {
+        const subs = demoSubs(); if (!subs.find((s) => s.email === email)) subs.push({ email, name, date: todayISO() });
+        ls.set(LS_SUBS, JSON.stringify(subs)); return;
+      }
+      const r = await fetch('/api/subscribe', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email, name, website: trap }) });
+      if (r.status === 429) throw new Error('Too many sign-ups from this connection. Try again later.');
+      if (!r.ok) throw new Error('That email address was not accepted. Check it and try again.');
+    },
+    async listSubs() {
+      if (mode !== 'live') return demoSubs();
+      const r = await this._auth('/api/subscribers'); return (await r.json()).subscribers || [];
+    },
+    async removeSub(email) {
+      if (mode !== 'live') { ls.set(LS_SUBS, JSON.stringify(demoSubs().filter((s) => s.email !== email))); return; }
+      await this._auth('/api/subscribers?e=' + encodeURIComponent(email), { method: 'DELETE' });
+    },
+    async addSub(email, name) {
+      if (mode !== 'live') return this.subscribe(email, name);
+      const r = await this._auth('/api/subscribers', { method: 'POST', body: JSON.stringify({ email, name }) });
+      if (!r.ok) throw new Error('That email address was not accepted.');
+    },
+    async send(msg) {
+      if (mode !== 'live') throw new Error('Emails can only be sent from the live site, once an email service is connected (see the README).');
+      const r = await this._auth('/api/send', { method: 'POST', body: JSON.stringify(msg) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'Sending failed (error ' + r.status + ').');
+      return j;
+    },
+    // ---- website suggestions ----
+    async suggest(s) {
+      if (mode !== 'live') {
+        const all = safe(() => JSON.parse(ls.get(LS_SUGG) || '[]'), []) || [];
+        all.unshift(Object.assign({ key: 'suggestion:' + new Date().toISOString(), date: new Date().toISOString() }, s));
+        ls.set(LS_SUGG, JSON.stringify(all.slice(0, 100))); return { ok: true, emailed: false };
+      }
+      const r = await fetch('/api/suggest', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(s) });
+      if (r.status === 429) throw new Error('Too many suggestions from this connection. Please try again in an hour.');
+      if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || 'Your suggestion was not sent. Please try again.');
+      return r.json();
+    },
+    async suggestions() {
+      if (mode !== 'live') return { to: ls.get(LS_SUGG_TO) || DEFAULT_SUGGEST_TO, emailReady: false, suggestions: safe(() => JSON.parse(ls.get(LS_SUGG) || '[]'), []) || [] };
+      return (await this._auth('/api/suggest')).json();
+    },
+    async setSuggestTo(to) {
+      if (mode !== 'live') { ls.set(LS_SUGG_TO, to); return; }
+      const r = await this._auth('/api/suggest', { method: 'PUT', body: JSON.stringify({ to }) });
+      if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || 'The address was not saved.');
+    },
+    async deleteSuggestion(key) {
+      if (mode !== 'live') { ls.set(LS_SUGG, JSON.stringify((safe(() => JSON.parse(ls.get(LS_SUGG) || '[]'), []) || []).filter((x) => x.key !== key))); return; }
+      await this._auth('/api/suggest?key=' + encodeURIComponent(key), { method: 'DELETE' });
+    },
+    async campaigns() {
+      if (mode !== 'live') return [];
+      const r = await this._auth('/api/send'); return (await r.json()).campaigns || [];
+    },
+    async _auth(url, opt = {}) {
+      const r = await fetch(url, Object.assign({}, opt, { headers: { 'content-type': 'application/json', authorization: 'Bearer ' + token } }));
+      if (r.status === 401) { logout(true); throw new Error('Your login has expired. Log in again.'); }
+      if (r.status === 403) throw new Error('Your account is not allowed to do that.');
+      return r;
+    },
+    async save(data) {
+      if (mode === 'live') {
+        const r = await fetch('/api/site', { method: 'PUT', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + token }, body: JSON.stringify(data) });
+        if (r.status === 401) { logout(true); throw new Error('Your login has expired. Log in again, then press Save. Your edits are still on screen.'); }
+        if (r.status === 403) throw new Error('Your account cannot save these changes.');
+        if (!r.ok) throw new Error('The server did not accept the save (error ' + r.status + '). Wait a minute and press Save again.');
+        return;
+      }
+      if (!ls.set(LS_SITE, JSON.stringify(data))) throw new Error('This browser would not store the changes (storage may be full or blocked). Use Backup & Handoff to copy your work.');
+    },
+    async upload(file, kind) {
+      // kind: 'image' (logo, shrunk to 600px), 'photo' (gallery, 1600px), or 'file' (documents, bulletins)
+      const isImage = kind === 'image' || kind === 'photo' || kind === 'icon';
+      const px = kind === 'photo' ? (mode === 'live' ? 1600 : 1000) : kind === 'icon' ? 256 : 600;
+      if (mode === 'live') {
+        let body = file, type = file.type || 'application/octet-stream';
+        if (isImage && /^image\/(png|jpe?g|webp)$/.test(file.type)) { const blob = await (await fetch(await shrinkImage(file, px, kind === 'photo'))).blob(); body = blob; type = blob.type; }
+        const r = await fetch('/api/upload', { method: 'POST', headers: { authorization: 'Bearer ' + token, 'content-type': type, 'x-filename': encodeURIComponent(file.name) }, body });
+        if (r.status === 401) { logout(true); throw new Error('Your login has expired. Log in again and retry the upload.'); }
+        if (!r.ok) throw new Error('Upload failed (error ' + r.status + '). Files must be under 20 MB.');
+        return (await r.json()).url;
+      }
+      // Demo: keep the file inside the saved content as a data URL (images are shrunk first).
+      if (isImage && /^image\/(png|jpe?g|webp|gif)$/.test(file.type)) return shrinkImage(file, px, kind === 'photo');
+      if (file.size > 1.5 * 1024 * 1024) throw new Error('In demo mode files must be under 1.5 MB. On the live site the limit is 20 MB.');
+      return readAsDataURL(file);
+    },
+    async changePassword(current, next) {
+      if (mode !== 'live') throw new Error('Passwords can be changed once the site is live. The demo password is always "' + DEMO_PASSWORD + '".');
+      const r = await fetch('/api/password', { method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + token }, body: JSON.stringify({ current, next }) });
+      if (r.status === 403) throw new Error('The current password is not correct.');
+      if (!r.ok) throw new Error('The password was not changed (error ' + r.status + ').');
+    },
+    async listBackups() {
+      if (mode !== 'live') return [];
+      const r = await fetch('/api/backups', { headers: { authorization: 'Bearer ' + token } });
+      return r.ok ? (await r.json()).backups || [] : [];
+    },
+    async getBackup(key) {
+      const r = await fetch('/api/backups?key=' + encodeURIComponent(key), { headers: { authorization: 'Bearer ' + token } });
+      if (!r.ok) throw new Error('That backup could not be loaded.');
+      return r.json();
+    },
+  };
+  // Demo-mode accounts live in this browser only (plain text, demo use only).
+  function demoUsers() {
+    const saved = safe(() => JSON.parse(ls.get(LS_USERS) || 'null'), null) || [
+      { username: 'ithaca', name: 'Ithaca club manager (example)', role: 'club', clubs: ['c5'], tournaments: [], password: 'club112' },
+      { username: 'rochester', name: 'Rochester Fall chair (example)', role: 'tournament', clubs: [], tournaments: ['t4'], password: 'chair112' },
+    ];
+    return [{ username: 'webmaster', name: 'Webmaster', role: 'owner', clubs: [], tournaments: [], password: DEMO_PASSWORD }].concat(saved.filter((u) => u.username !== 'webmaster'));
+  }
+  const demoSubs = () => safe(() => JSON.parse(ls.get(LS_SUBS) || '[]'), []) || [];
+  function readAsDataURL(file) {
+    return new Promise((res, rej) => { const fr = new FileReader(); fr.onload = () => res(fr.result); fr.onerror = () => rej(new Error('The file could not be read.')); fr.readAsDataURL(file); });
+  }
+  async function shrinkImage(file, max, jpeg) {
+    const url = await readAsDataURL(file);
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error('That image could not be opened.')); i.src = url; });
+    const scale = Math.min(1, max / Math.max(img.width, img.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.width * scale); c.height = Math.round(img.height * scale);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    return (jpeg || file.type === 'image/jpeg') ? c.toDataURL('image/jpeg', 0.85) : c.toDataURL('image/png');
+  }
+
+  // ---------- theme ----------
+  function lum(hex) {
+    const m = /^#?([0-9a-f]{6})$/i.exec(hex || ''); if (!m) return 0;
+    const n = parseInt(m[1], 16);
+    return [n >> 16, (n >> 8) & 255, n & 255].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); })
+      .reduce((a, v, i) => a + v * [0.2126, 0.7152, 0.0722][i], 0);
+  }
+  const contrast = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+  const onColor = (bg) => (contrast(bg, '#FFFFFF') >= contrast(bg, '#111111') ? '#FFFFFF' : '#111111');
+  // Typefaces the webmaster can pick. "g" = Google Fonts family spec, loaded only when chosen.
+  const SANS = ', Verdana, "Segoe UI", system-ui, sans-serif', SERIF = ', Georgia, "Times New Roman", serif';
+  const FONTS = {
+    atkinson: { label: 'Atkinson Hyperlegible (designed for low vision)', stack: '"Atkinson Hyperlegible"' + SANS, g: 'Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400' },
+    lexend: { label: 'Lexend (designed for easy reading)', stack: '"Lexend"' + SANS, g: 'Lexend:wght@400;600;700' },
+    opensans: { label: 'Open Sans', stack: '"Open Sans"' + SANS, g: 'Open+Sans:ital,wght@0,400;0,700;1,400' },
+    sourcesans: { label: 'Source Sans 3', stack: '"Source Sans 3"' + SANS, g: 'Source+Sans+3:ital,wght@0,400;0,700;1,400' },
+    notosans: { label: 'Noto Sans', stack: '"Noto Sans"' + SANS, g: 'Noto+Sans:ital,wght@0,400;0,700;1,400' },
+    lato: { label: 'Lato', stack: '"Lato"' + SANS, g: 'Lato:ital,wght@0,400;0,700;1,400' },
+    roboto: { label: 'Roboto', stack: '"Roboto"' + SANS, g: 'Roboto:ital,wght@0,400;0,700;1,400' },
+    nunito: { label: 'Nunito (rounded, friendly)', stack: '"Nunito"' + SANS, g: 'Nunito:ital,wght@0,400;0,700;1,400' },
+    publicsans: { label: 'Public Sans', stack: '"Public Sans"' + SANS, g: 'Public+Sans:ital,wght@0,400;0,700;1,400' },
+    librefranklin: { label: 'Libre Franklin', stack: '"Libre Franklin"' + SANS, g: 'Libre+Franklin:ital,wght@0,400;0,700;1,400' },
+    verdana: { label: 'Verdana (built into computers)', stack: 'Verdana, Tahoma, sans-serif' },
+    arial: { label: 'Arial / Helvetica (built in)', stack: 'Arial, Helvetica, sans-serif' },
+    system: { label: "Device's own font", stack: 'system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif' },
+    literata: { label: 'Literata (serif)', stack: '"Literata"' + SERIF, g: 'Literata:opsz,wght@7..72,400;7..72,700' },
+    merriweather: { label: 'Merriweather (serif, sturdy)', stack: '"Merriweather"' + SERIF, g: 'Merriweather:ital,wght@0,400;0,700;1,400' },
+    sourceserif: { label: 'Source Serif 4 (serif)', stack: '"Source Serif 4"' + SERIF, g: 'Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400' },
+    lora: { label: 'Lora (serif)', stack: '"Lora"' + SERIF, g: 'Lora:ital,wght@0,400;0,700;1,400' },
+    playfair: { label: 'Playfair Display (serif, headings only)', stack: '"Playfair Display"' + SERIF, g: 'Playfair+Display:wght@600;700;800', headingOnly: true },
+    serif: { label: 'Georgia (serif, built in)', stack: 'Georgia, "Times New Roman", serif' },
+  };
+  const fontLoaded = new Set(['atkinson', 'literata']);
+  function ensureFont(key) {
+    const f = FONTS[key];
+    if (!f || !f.g || fontLoaded.has(key)) return;
+    fontLoaded.add(key);
+    const l = document.createElement('link'); l.rel = 'stylesheet';
+    l.href = 'https://fonts.googleapis.com/css2?family=' + f.g + '&display=swap';
+    document.head.appendChild(l);
+  }
+  const SIZE_STEPS = [1, 1.15, 1.32];
+  // Browser-tab icon: the uploaded one, or a "112" badge drawn in the site's own colors.
+  function badgeIcon(bg, band) {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><clipPath id="r"><rect width="64" height="64" rx="13"/></clipPath></defs><g clip-path="url(#r)"><rect width="64" height="64" fill="${bg}"/><rect y="54" width="64" height="10" fill="${band}"/></g><text x="32" y="36" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-weight="700" font-size="28" fill="${onColor(bg)}">112</text></svg>`;
+    return 'data:image/svg+xml,' + encodeURIComponent(svg);
+  }
+  function setFavicon(href) {
+    let l = document.getElementById('u112-icon');
+    if (!l) { l = document.createElement('link'); l.id = 'u112-icon'; l.rel = 'icon'; document.head.appendChild(l); }
+    if (l.getAttribute('href') !== href) l.setAttribute('href', href);
+  }
+  function applyTheme() {
+    const st = site.settings, root = document.documentElement.style;
+    const hc = ls.get('u112-hc') === '1';
+    // High contrast overrides the chosen palette (inline values would otherwise win over the CSS class).
+    const c = hc ? { primary: '#002B4D', secondary: '#00391F', accent: st.colors.accent, bg: '#FFFFFF', surface: '#FFFFFF', text: '#000000' } : st.colors;
+    Object.keys(c).forEach((k) => root.setProperty('--' + k, c[k]));
+    root.setProperty('--on-primary', onColor(c.primary));
+    root.setProperty('--on-secondary', onColor(c.secondary));
+    const bodyKey = FONTS[st.font] && !FONTS[st.font].headingOnly ? st.font : 'atkinson';
+    const headKey = st.headingFont === 'same' ? bodyKey : (FONTS[st.headingFont] ? st.headingFont : 'literata');
+    ensureFont(bodyKey); ensureFont(headKey);
+    root.setProperty('--font-body', FONTS[bodyKey].stack); root.setProperty('--font-display', FONTS[headKey].stack);
+    const step = +(ls.get('u112-size') || 0);
+    root.setProperty('--base', Math.round((+st.baseSize || 20) * (SIZE_STEPS[step] || 1)) + 'px');
+    document.documentElement.classList.toggle('hc', hc);
+    document.title = st.siteName || 'ACBL Unit 112';
+    setFavicon(st.favicon || badgeIcon(c.primary, st.colors.secondary));
+  }
+
+  // ---------- rich text (tiny markdown) ----------
+  function inline(s) {
+    return s
+      .replace(/\[([^\]]+)\]\(((?:https?:\/\/|mailto:|#|\/)[^)\s]*)\)/g, (m, t, u) => '<a href="' + u + '">' + t + '</a>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+  }
+  function md(src) {
+    const lines = esc(src || '').split(/\r?\n/);
+    let out = '', para = [], list = [];
+    const flushP = () => { if (para.length) { out += '<p>' + inline(para.join('<br>')) + '</p>'; para = []; } };
+    const flushL = () => { if (list.length) { out += '<ul>' + list.map((l) => '<li>' + inline(l) + '</li>').join('') + '</ul>'; list = []; } };
+    lines.forEach((ln) => {
+      const t = ln.trim();
+      if (!t) { flushP(); flushL(); return; }
+      let m;
+      if ((m = /^#{2,3}\s+(.*)$/.exec(t))) { flushP(); flushL(); out += '<h2>' + inline(m[1]) + '</h2>'; return; }
+      if ((m = /^[-*]\s+(.*)$/.exec(t))) { flushP(); list.push(m[1]); return; }
+      flushL(); para.push(t);
+    });
+    flushP(); flushL();
+    return out;
+  }
+  const MDHELP = 'Blank line = new paragraph. **bold** · *italic* · [link text](https://…) · start a line with "- " for a bullet or "## " for a heading.';
+
+  // ---------- tournaments & clubs: automatic ACBL links ----------
+  const validSanction = (s) => /^\d{7}$/.test(String(s || '').trim());
+  function tLinks(t) {
+    const s = String(t.sanction || '').trim();
+    const flyer = t.flyerUrl || (validSanction(s) ? 'https://web2.acbl.org/Tournaments/Ads/20' + s.slice(0, 2) + '/' + s.slice(2, 4) + '/' + s + '.pdf' : '');
+    const results = t.resultsUrl || (validSanction(s) ? 'https://live.acbl.org/events/' + s : '');
+    return { flyer, results, flyerLabel: t.type === 'NAP' ? 'Registration form' : 'Tournament flyer' };
+  }
+  function tStatus(t) {
+    const s = parseDate(t.start), e = parseDate(t.end) || s, now = today();
+    if (!s) return 'upcoming';
+    if (now < s) return 'upcoming';
+    if (now <= e) return 'live';
+    return 'past';
+  }
+  const byStart = (a, b) => (a.start || '9999').localeCompare(b.start || '9999');
+  function cLinks(c) {
+    const n = String(c.clubNumber || '').trim();
+    return {
+      live: c.liveUrl || (n ? 'https://my.acbl.org/club-results/' + n : ''),
+      tcg: c.noTcg ? '' : (c.tcgUrl || (n ? 'https://tcgcloud.bridgefinesse.com/ClubWebHost/' + n + '/' : '')),
+    };
+  }
+
+  const hasDetails = (t) => !!(t.address || t.venue || (t.sessions || []).length || t.hotels || t.food || t.parking || t.partnership || t.contacts || t.details || (t.bulletins || []).length);
+  const newsLive = (n) => !n.expires || todayISO() <= n.expires;
+  function gamesOn(dayKey) {
+    const out = [];
+    site.clubs.forEach((c) => (c.games || []).forEach((g) => { if (g.day === dayKey) out.push({ c, g }); }));
+    return out.sort((a, b) => (a.g.time || '99').localeCompare(b.g.time || '99'));
+  }
+  const gameLi = ({ c, g }) => `<li><strong>${esc(fmtTime(g.time) || 'Time: ask the club')}</strong> · <a href="#clubs">${esc(c.name)}</a>${g.label ? ` · ${esc(g.label)}` : ''}</li>`;
+
+  // ---------- routing ----------
+  const route = () => (location.hash || '#home').slice(1) || 'home';
+  window.addEventListener('hashchange', () => { pendingDelete = null; pendingConfirm = null; if (lightbox) { lightbox = null; renderLightbox(); } render(true); });
+
+  // ---------- chrome (header, nav, footer) ----------
+  function visiblePages() { return site.pages.filter((p) => p.show || p.id === 'home'); }
+  function renderChrome() {
+    const st = site.settings, r = route();
+    const step = +(ls.get('u112-size') || 0);
+    const hc = ls.get('u112-hc') === '1';
+    const loggedIn = !!token;
+    $('#adminbar').innerHTML = loggedIn ? `
+      <div class="adminbar" role="region" aria-label="Webmaster tools"><div class="wrap">
+        <strong>${esc(user ? user.name || user.username : 'Webmaster')}${mode === 'live' ? '' : ' · demo copy'}${dirty ? ' · <span>Unsaved changes</span>' : ''}</strong>
+        <button class="btn small green" data-act="save" ${dirty ? '' : 'disabled'}>Save changes</button>
+        ${r === 'admin' ? '<a class="btn small alt" href="#home">View site</a>' : '<a class="btn small alt" href="#admin">Open admin panel</a>'}
+        <button class="btn small alt" data-act="logout">Log out</button>
+      </div></div>` : '';
+    $('#topbar').innerHTML = `
+      <div class="wrap">
+        <span>${st.showSuits ? '<span class="suits" aria-hidden="true">♠<span class="red">♥</span><span class="red">♦</span>♣</span> ' : ''}${esc(st.tagline)}</span>
+        <div class="textsize" role="group" aria-label="Text size">
+          <span>Text size</span>
+          ${SIZE_STEPS.map((_, i) => `<button data-act="size" data-i="${i}" aria-pressed="${step === i}" style="font-size:${0.85 + i * 0.2}rem" aria-label="${['Normal', 'Large', 'Largest'][i]} text">A</button>`).join('')}
+          <button data-act="hc" aria-pressed="${hc}" style="padding-inline:.6rem">High contrast</button>
+        </div>
+      </div>`;
+    setFavicon(st.favicon || badgeIcon(st.colors.primary, st.colors.secondary));
+    const A = st.alert || {};
+    const alertOn = A.on && A.text && (!A.until || todayISO() <= A.until);
+    $('#alert').innerHTML = alertOn ? `<div class="sitealert ${esc(A.level || 'urgent')}" role="region" aria-label="Important notice"><div class="wrap">
+      <strong>${A.level === 'info' ? 'Notice' : 'Important'}:</strong> <span>${esc(A.text)}</span>${A.link ? ` <a href="${esc(A.link)}">More information</a>` : ''}</div></div>` : '';
+    const logo = st.logo ? `<img src="${esc(st.logo)}" alt="${esc(st.logoAlt || st.siteName)}">` : `<span class="mark" aria-hidden="true"><span>112<small>UNIT</small></span></span>`;
+    const mh = $('#masthead');
+    mh.className = 'masthead band' + (st.headerStyle === 'center' ? ' center' : '');
+    mh.innerHTML = `<div class="wrap"><a class="brand" href="#home">${logo}<span><span class="brand-name">${esc(st.siteName)}</span><span class="brand-tag" style="display:block">American Contract Bridge League · District 4</span></span></a>
+      <form class="sitesearch" id="searchform" role="search"><label class="sr" for="q">Search this site</label><input type="search" id="q" placeholder="Search the site" value="${esc(searchQuery)}"><button class="btn" type="submit">Search</button></form></div>`;
+    $('#nav').innerHTML = `<div class="wrap"><ul>${visiblePages().map((p) => `<li><a href="#${esc(p.id)}"${p.id === r || (p.id === 'tournaments' && r.startsWith('t-')) ? ' aria-current="page"' : ''}>${esc(p.title)}</a></li>`).join('')}</ul></div>`;
+    const board = site.board.filter((b) => b.email);
+    $('#footer').innerHTML = `<div class="wrap"><div class="cols">
+      <div><h2>${esc(st.siteName)}</h2><p>${esc(st.footerText)}</p>${st.contactEmail ? `<p>Email: <a href="mailto:${esc(st.contactEmail)}">${esc(st.contactEmail)}</a></p>` : ''}</div>
+      <div><h2>Find it fast</h2><ul>${visiblePages().slice(0, 6).map((p) => `<li><a href="#${esc(p.id)}">${esc(p.title)}</a></li>`).join('')}</ul></div>
+      <div><h2>Bridge links</h2><div class="partner-logos">${(st.partnerLinks || []).map((l) => `<a href="${esc(l.url)}">${l.img ? `<img src="${esc(l.img)}" alt="${esc(l.name)}">` : esc(l.name)}</a>`).join('<br>')}</div>
+        <p style="margin-top:1.25rem"><a href="#admin">Webmaster login</a></p></div>
+    </div></div>`;
+    void board;
+  }
+
+  // ---------- public pages ----------
+  const panel = (inner, cls = '') => `<section class="panel ${cls}">${inner}</section>`;
+  const head = (title, intro) => `<div class="page-head"><h1>${esc(title)}</h1>${intro ? `<div class="lead">${md(intro)}</div>` : ''}</div>`;
+  const pageTitle = (id) => (site.pages.find((p) => p.id === id) || {}).title || '';
+
+  function dateBlock(t) {
+    const s = parseDate(t.start), e = parseDate(t.end) || s;
+    if (!s) return '<div class="tdate">TBA</div>';
+    const same = +s === +e;
+    const days = same ? s.getDate() : (s.getMonth() === e.getMonth() ? s.getDate() + '–' + e.getDate() : s.getDate() + '–' + MON[e.getMonth()] + ' ' + e.getDate());
+    return `<div class="tdate" aria-hidden="true"><span class="mo">${MON[s.getMonth()]} ${s.getFullYear()}</span><span class="d">${days}</span></div>`;
+  }
+  function tCard(t) {
+    const st = tStatus(t), L = tLinks(t);
+    const pill = st === 'live' ? '<span class="pill live">Playing now</span>' : st === 'upcoming' ? '<span class="pill up">Upcoming</span>' : '<span class="pill past">Completed</span>';
+    const where = [t.venue, t.city].filter(Boolean).join(', ');
+    let btns = '';
+    if (st === 'past') btns = (L.results ? `<a class="btn" href="${esc(L.results)}">Results<span class="sr"> for ${esc(t.name)}</span></a>` : '<span class="muted">Results not linked yet</span>') + (L.flyer ? `<a class="btn alt" href="${esc(L.flyer)}">${L.flyerLabel}</a>` : '');
+    else if (st === 'live') btns = (L.results ? `<a class="btn" href="${esc(L.results)}">Live results<span class="sr"> for ${esc(t.name)}</span></a>` : '') + (L.flyer ? `<a class="btn alt" href="${esc(L.flyer)}">${L.flyerLabel}</a>` : '');
+    else btns = L.flyer ? `<a class="btn" href="${esc(L.flyer)}">${L.flyerLabel}<span class="sr"> for ${esc(t.name)}</span></a>` : '<span class="muted">Flyer coming soon</span>';
+    if (hasDetails(t)) btns += `<a class="btn alt" href="#t-${esc(t.id)}">Details<span class="sr"> about ${esc(t.name)}</span></a>`;
+    return `<article class="tcard">${dateBlock(t)}<div><h3>${hasDetails(t) ? `<a href="#t-${esc(t.id)}">${esc(t.name)}</a>` : esc(t.name)}</h3>
+      <div class="tmeta">${pill}${esc(fmtRange(t.start, t.end))}${where ? ' · ' + esc(where) : ''}</div>
+      ${t.notes ? `<div class="tmeta">${esc(t.notes)}</div>` : ''}
+      ${st === 'upcoming' && validSanction(t.sanction) ? '<div class="tmeta">Results will appear here automatically when play begins.</div>' : ''}
+      </div><div class="btnrow">${btns}</div></article>`;
+  }
+
+  const HOME = {
+    welcome: () => panel(`<h1>${esc(site.content.welcomeTitle)}</h1><div class="rich lead">${md(site.content.welcome)}</div>
+      <div class="btnrow"><a class="btn" href="#tournaments">See tournaments</a><a class="btn alt" href="#clubs">Find a club game</a>${site.pages.find((p) => p.id === 'newplayers' && p.show) ? '<a class="btn alt" href="#newplayers">New to bridge?</a>' : ''}</div>`),
+    next: () => {
+      const t = site.tournaments.filter((x) => tStatus(x) !== 'past').sort(byStart)[0];
+      if (!t) return '';
+      const st = tStatus(t), L = tLinks(t), n = daysBetween(today(), parseDate(t.start) || today());
+      const count = st === 'live' ? '<b>Now</b>playing' : n === 0 ? '<b>Today</b>' : `<b>${n}</b>${n === 1 ? 'day' : 'days'} away`;
+      return `<section class="feature" aria-labelledby="next-h"><div class="count">${count}</div>
+        <div><div class="eyebrow">${st === 'live' ? 'Happening now' : 'Next tournament'}</div><h2 id="next-h">${esc(t.name)}</h2>
+        <div>${esc(fmtRange(t.start, t.end))}${t.city ? ' · ' + esc(t.city) : ''}</div></div>
+        <div class="btnrow">${st === 'live' && L.results ? `<a class="btn" href="${esc(L.results)}">Live results</a>` : L.flyer ? `<a class="btn" href="${esc(L.flyer)}">${L.flyerLabel}</a>` : ''}<a class="btn alt" href="#tournaments">All tournaments</a></div></section>`;
+    },
+    results: () => {
+      const cutoff = today(); cutoff.setDate(cutoff.getDate() - 120);
+      const past = site.tournaments.filter((t) => tStatus(t) === 'past' && (parseDate(t.end || t.start) || 0) >= cutoff).sort(byStart).reverse().slice(0, 4);
+      if (!past.length) return '';
+      return panel(`<h2>Latest results</h2><div class="quick">${past.map((t) => { const L = tLinks(t); return L.results ? `<a href="${esc(L.results)}">${esc(t.name)}<span>${esc(fmtRange(t.start, t.end))}</span></a>` : ''; }).join('')}</div>
+        <p style="margin:1rem 0 0"><a href="#tournaments">All tournaments and past results</a></p>`);
+    },
+    news: () => {
+      const items = site.news.filter(newsLive).sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) || (b.date || '').localeCompare(a.date || '')).slice(0, 6);
+      if (!items.length) return '';
+      return panel(`<h2>News & announcements</h2><div class="news">${items.map((n) => `<article><time datetime="${esc(n.date)}">${esc(fmtDate(n.date))}</time><h3>${esc(n.title)}</h3><div class="rich">${md(n.body)}</div></article>`).join('')}</div>`);
+    },
+    today: () => {
+      const d0 = today(), d1 = new Date(d0); d1.setDate(d1.getDate() + 1);
+      if (!site.clubs.some((c) => (c.games || []).length)) return '';
+      const day = (d, label) => { const g = gamesOn(DAY_KEYS[d.getDay()]); return `<div><h3>${label} · ${DAYS[d.getDay()]}</h3>${g.length ? `<ul class="games">${g.map(gameLi).join('')}</ul>` : '<p class="empty">No club games listed.</p>'}</div>`; };
+      return panel(`<h2>Where can I play?</h2><div class="grid2">${day(d0, 'Today')}${day(d1, 'Tomorrow')}</div><p style="margin:1rem 0 0"><a href="#clubs">Full weekly schedule</a></p>`);
+    },
+    signup: () => panel(`<h2>${esc(site.content.signupTitle)}</h2><p>${esc(site.content.signupText)}</p>
+      <form id="signupform" class="signup" novalidate><div class="field"><label for="su-email">Email address</label><input type="email" id="su-email" autocomplete="email" required></div>
+      <div class="field"><label for="su-name">Name (optional)</label><input type="text" id="su-name" autocomplete="name"></div>
+      <div class="hp" aria-hidden="true"><label for="su-web">Leave this empty</label><input type="text" id="su-web" tabindex="-1" autocomplete="off"></div>
+      <button class="btn green" type="submit">Sign me up</button></form><div id="signupmsg" role="status"></div>`, 'signup-panel'),
+    clubs: () => site.clubs.length ? panel(`<h2>Club game results</h2><p class="muted">Tap your club to see its latest results on ACBL Live for Clubs.</p>
+      <div class="quick">${site.clubs.map((c) => { const L = cLinks(c); return L.live ? `<a href="${esc(L.live)}">${esc(c.name)}<span>${esc(c.schedule || c.city || '')}</span></a>` : ''; }).join('')}</div>
+      <p style="margin:1rem 0 0"><a href="#clubs">Club details and Common Game results</a></p>`) : '',
+  };
+
+  const PAGES = {
+    home: () => `<div class="stack">${site.settings.homeSections.filter((s) => s.show).map((s) => (HOME[s.id] ? HOME[s.id]() : '')).join('')}</div>`,
+    tournaments: () => {
+      const all = site.tournaments.slice().sort(byStart);
+      const live = all.filter((t) => tStatus(t) === 'live');
+      const up = all.filter((t) => tStatus(t) === 'upcoming');
+      const past = all.filter((t) => tStatus(t) === 'past').reverse();
+      const years = [...new Set(past.map((t) => (t.start || '').slice(0, 4)))];
+      return head(pageTitle('tournaments'), site.content.tournamentsIntro) + `<div class="stack">
+        ${live.length ? `<section><h2>Playing now</h2><div class="tlist">${live.map(tCard).join('')}</div></section>` : ''}
+        <section><h2>Upcoming</h2>${up.length ? `<div class="tlist">${up.map(tCard).join('')}</div>` : '<p class="empty">No upcoming tournaments are listed yet.</p>'}</section>
+        <section><h2>Past results</h2>${past.length ? years.map((y) => `<h3>${esc(y)}</h3><div class="tlist">${past.filter((t) => (t.start || '').startsWith(y)).map(tCard).join('')}</div>`).join('') : '<p class="empty">No past results yet.</p>'}</section>
+        <p class="muted">Sectional results are posted by the ACBL at <a href="https://live.acbl.org">live.acbl.org</a>. Masterpoints usually appear on MyACBL within a few days.</p></div>`;
+    },
+    clubs: () => {
+      const tk = DAY_KEYS[today().getDay()];
+      const hasGames = site.clubs.some((c) => (c.games || []).length);
+      const list = clubDay === 'all' ? site.clubs : site.clubs.filter((c) => (c.games || []).some((g) => g.day === clubDay));
+      const filt = hasGames ? `<div class="dayfilter" role="group" aria-label="Show clubs that play on">
+        <button data-act="clubday" data-day="all" aria-pressed="${clubDay === 'all'}">All clubs</button>
+        ${DAY_KEYS.map((d, i) => `<button data-act="clubday" data-day="${d}" aria-pressed="${clubDay === d}">${DAYS[i]}${d === tk ? ' (today)' : ''}</button>`).join('')}</div>` : '';
+      const cards = list.map((c) => {
+        const L = cLinks(c);
+        const games = (c.games || []).slice().sort((a, b) => DAY_KEYS.indexOf(a.day) - DAY_KEYS.indexOf(b.day) || (a.time || '').localeCompare(b.time || ''));
+        const addr = [c.address, c.city].filter(Boolean).join(', ');
+        const rows = [['Where', c.address ? addr : c.city], ['Contact', c.contact], ['Notes', c.schedule], ['Club #', c.clubNumber]].filter((r) => r[1]);
+        return `<article class="club"><h3>${esc(c.name)}</h3>
+          ${games.length ? `<ul class="games">${games.map((g) => `<li${g.day === tk ? ' class="today"' : ''}><strong>${DAYS[DAY_KEYS.indexOf(g.day)] || esc(g.day)}</strong>${g.time ? ' ' + esc(fmtTime(g.time)) : ''}${g.label ? ' · ' + esc(g.label) : ''}${g.day === tk ? ' <span class="pill up">Today</span>' : ''}</li>`).join('')}</ul>` : ''}
+          <dl>${rows.map((r) => `<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join('')}</dl>
+          ${c.address ? `<a href="${esc(mapsUrl(addr))}">Directions<span class="sr"> to ${esc(c.name)}</span></a>` : ''}
+          ${c.website ? `<a href="${esc(c.website)}">Club website</a>` : ''}
+          <div class="btnrow">${L.live ? `<a class="btn small" href="${esc(L.live)}">Results<span class="sr"> for ${esc(c.name)}</span></a>` : ''}${L.tcg ? `<a class="btn small alt" href="${esc(L.tcg)}">Common Game<span class="sr"> for ${esc(c.name)}</span></a>` : ''}</div></article>`;
+      }).join('');
+      return head(pageTitle('clubs'), site.content.clubsIntro) + filt + (site.clubs.length ? (cards ? `<div class="clubs">${cards}</div>` : '<p class="empty">No clubs list a game on that day.</p>') : '<p class="empty">No clubs listed yet.</p>');
+    },
+    learn: () => {
+      const L = site.learn || { teachers: [], resources: [] };
+      return head(pageTitle('learn')) + `<div class="stack">${panel(`<div class="rich lead">${md(site.content.learn)}</div>`)}
+        ${panel(`<h2>Teachers and classes</h2>${L.teachers.length ? `<div class="clubs">${L.teachers.map((t) => `<article class="club"><h3>${esc(t.name)}</h3><dl>${[['Where', t.area], ['When', t.when], ['Contact', t.contact]].filter((r) => r[1]).map((r) => `<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join('')}</dl>${t.notes ? `<div class="rich">${md(t.notes)}</div>` : ''}${t.url ? `<a href="${esc(t.url)}">More information</a>` : ''}</article>`).join('')}</div>` : '<p class="empty">Ask at any club about lessons. Teachers will be listed here.</p>'}`)}
+        ${L.resources.length ? panel(`<h2>Learn at home</h2><ul>${L.resources.map((r) => `<li><a href="${esc(r.url)}">${esc(r.title)}</a></li>`).join('')}</ul>`) : ''}</div>`;
+    },
+    gallery: () => {
+      const albums = (site.gallery || []).slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+      return head(pageTitle('gallery'), site.content.galleryIntro) + (albums.length ? `<div class="stack">${albums.map((al) => panel(`<h2>${esc(al.title)}</h2>${al.date ? `<p class="muted">${esc(fmtDate(al.date))}</p>` : ''}
+        ${(al.photos || []).length ? `<ul class="photos">${al.photos.map((ph, i) => `<li><button class="photo" data-act="photo" data-album="${esc(al.id)}" data-i="${i}"><img src="${esc(ph.url)}" alt="${esc(ph.caption || al.title)}" loading="lazy"></button>${ph.caption ? `<span>${esc(ph.caption)}</span>` : ''}</li>`).join('')}</ul>` : '<p class="empty">Photos coming soon.</p>'}`)).join('')}</div>` : '<p class="empty">Photo albums will appear here.</p>');
+    },
+    newplayers: () => head(pageTitle('newplayers')) + panel(`<div class="rich">${md(site.content.newplayers)}</div>`),
+    recognition: () => {
+      const R = site.recognition;
+      const tbl = (rows, cols, empty) => rows.length ? `<div class="tablewrap"><table><thead><tr>${cols.map((c) => `<th scope="col">${c[1]}</th>`).join('')}</tr></thead><tbody>${rows.slice().sort((a, b) => (b.date || '').localeCompare(a.date || '')).map((r) => `<tr>${cols.map((c) => `<td>${esc(c[0] === 'date' ? fmtDate(r.date) : r[c[0]])}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : `<p class="empty">${empty}</p>`;
+      return head(pageTitle('recognition'), site.content.recognitionIntro) + `<div class="stack">
+        ${panel('<h2>New Life Masters</h2>' + tbl(R.lifeMasters, [['name', 'Player'], ['club', 'Home club'], ['date', 'Date']], 'New Life Masters will be listed here.'))}
+        ${panel('<h2>Milestones and rank changes</h2>' + tbl(R.milestones, [['name', 'Player'], ['achievement', 'Achievement'], ['date', 'Date']], 'Player milestones will be listed here.'))}
+        ${R.links.length ? panel('<h2>Standings</h2><ul>' + R.links.map((l) => `<li><a href="${esc(l.url)}">${esc(l.title)}</a></li>`).join('') + '</ul>') : ''}</div>`;
+    },
+    about: () => head(pageTitle('about')) + `<div class="stack">${panel(`<div class="rich">${md(site.content.about)}</div>`)}
+      ${panel(`<h2>Unit 112 Board</h2>${site.board.length ? `<div class="tablewrap"><table><thead><tr><th scope="col">Position</th><th scope="col">Name</th><th scope="col">Email</th></tr></thead><tbody>${site.board.map((b) => `<tr><td>${esc(b.role)}</td><td>${esc(b.name)}</td><td>${b.email ? `<a href="mailto:${esc(b.email)}">${esc(b.email)}</a>` : ''}</td></tr>`).join('')}</tbody></table></div>` : '<p class="empty">Board members will be listed here.</p>'}`)}</div>`,
+    documents: () => {
+      const docs = site.documents.slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+      const cats = [...new Set(docs.map((d) => d.category || 'Other'))];
+      return head(pageTitle('documents'), site.content.documentsIntro) + (docs.length ? `<div class="stack">${cats.map((c) => panel(`<h2>${esc(c)}</h2><ul>${docs.filter((d) => (d.category || 'Other') === c).map((d) => `<li><a href="${esc(d.url)}">${esc(d.title)}</a>${d.date ? ` <span class="muted">· ${esc(fmtDate(d.date))}</span>` : ''}</li>`).join('')}</ul>`)).join('')}</div>` : '<p class="empty">Bylaws, minutes and reports will be posted here.</p>');
+    },
+    contact: () => head(pageTitle('contact')) + `<div class="stack">${panel(`<div class="rich">${md(site.content.contact)}</div>${site.settings.contactEmail ? `<p><strong>Unit email:</strong> <a href="mailto:${esc(site.settings.contactEmail)}">${esc(site.settings.contactEmail)}</a></p>` : ''}`)}
+      ${site.board.length ? panel(`<h2>Board members</h2><ul>${site.board.map((b) => `<li><strong>${esc(b.role)}:</strong> ${esc(b.name)}${b.email ? ` · <a href="mailto:${esc(b.email)}">${esc(b.email)}</a>` : ''}</li>`).join('')}</ul>`) : ''}${suggestForm()}</div>`,
+  };
+
+  function tournamentPage(t) {
+    const st = tStatus(t), L = tLinks(t);
+    const where = [t.venue, t.address, t.city].filter(Boolean).join(', ');
+    const sessions = (t.sessions || []).slice().sort((a, b) => ((a.date || '') + (a.time || '')).localeCompare((b.date || '') + (b.time || '')));
+    const sec = (title, body) => body ? panel(`<h2>${title}</h2><div class="rich">${md(body)}</div>`) : '';
+    const bl = (t.bulletins || []).slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    return `<p><a href="#tournaments">← All tournaments</a></p><div class="page-head"><h1>${esc(t.name)}</h1>
+      <p class="lead">${esc(fmtRange(t.start, t.end))}${t.city ? ' · ' + esc(t.city) : ''}</p>
+      <div class="btnrow">${st !== 'upcoming' && L.results ? `<a class="btn" href="${esc(L.results)}">${st === 'live' ? 'Live results' : 'Results'}</a>` : ''}${L.flyer ? `<a class="btn ${st === 'upcoming' ? '' : 'alt'}" href="${esc(L.flyer)}">${L.flyerLabel}</a>` : ''}${where ? `<a class="btn alt" href="${esc(mapsUrl(where))}">Directions</a>` : ''}</div></div>
+      <div class="stack">
+      ${t.notes || t.details ? panel(`${t.notes ? `<p class="lead">${esc(t.notes)}</p>` : ''}<div class="rich">${md(t.details)}</div>`) : ''}
+      ${sessions.length ? panel(`<h2>Schedule</h2><div class="tablewrap"><table><thead><tr><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Event</th></tr></thead><tbody>${sessions.map((x) => { const d = parseDate(x.date); return `<tr><td>${d ? DAYS[d.getDay()] + ', ' + MON[d.getMonth()] + ' ' + d.getDate() : ''}</td><td>${esc(fmtTime(x.time))}</td><td>${esc(x.event)}</td></tr>`; }).join('')}</tbody></table></div>`) : ''}
+      ${where ? panel(`<h2>Where</h2><p>${esc(where)}</p><a class="btn alt" href="${esc(mapsUrl(where))}">Open in maps</a>`) : ''}
+      ${bl.length ? panel(`<h2>Daily bulletins</h2><ul>${bl.map((b) => `<li><a href="${esc(b.url)}">${esc(b.title || 'Bulletin')}</a>${b.date ? ` <span class="muted">· ${esc(fmtDate(b.date))}</span>` : ''}</li>`).join('')}</ul>`) : ''}
+      ${sec('Partnerships', t.partnership)}${sec('Hotels', t.hotels)}${sec('Food', t.food)}${sec('Parking', t.parking)}${sec('Contacts', t.contacts)}
+      </div>`;
+  }
+
+  // ---------- site search ----------
+  const stripMd = (s) => String(s || '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[*#>-]/g, ' ');
+  function searchIndex() {
+    const idx = [], P = (id) => site.pages.find((p) => p.id === id);
+    const add = (title, text, href, kind) => idx.push({ title, text: stripMd(text), href, kind });
+    const shown = (id) => { const p = P(id); return p && (p.show || id === 'home'); };
+    add(site.content.welcomeTitle, site.content.welcome, '#home', 'Home');
+    site.news.filter(newsLive).forEach((n) => add(n.title, n.body + ' ' + fmtDate(n.date), '#home', 'News'));
+    if (shown('tournaments')) site.tournaments.forEach((t) => add(t.name, [fmtRange(t.start, t.end), t.city, t.venue, t.address, t.notes, t.details, t.hotels, t.food, t.parking, t.partnership, t.contacts, (t.sessions || []).map((x) => x.event).join(' ')].join(' '), hasDetails(t) ? '#t-' + t.id : '#tournaments', 'Tournament'));
+    if (shown('clubs')) site.clubs.forEach((c) => add(c.name + ' club', [c.city, c.address, c.schedule, c.contact, (c.games || []).map((g) => DAYS[DAY_KEYS.indexOf(g.day)] + ' ' + fmtTime(g.time) + ' ' + g.label).join(' ')].join(' '), '#clubs', 'Club'));
+    ['newplayers', 'learn', 'about', 'contact'].forEach((id) => { if (shown(id)) add(P(id).title, site.content[id], '#' + id, 'Page'); });
+    if (shown('learn')) (site.learn.teachers || []).forEach((t) => add(t.name, [t.area, t.when, t.contact, t.notes].join(' '), '#learn', 'Teacher'));
+    if (shown('about')) site.board.forEach((b) => add(b.name, b.role, '#about', 'Board'));
+    if (shown('documents')) site.documents.forEach((d) => add(d.title, d.category + ' ' + fmtDate(d.date), d.url, 'Document'));
+    if (shown('recognition')) { site.recognition.lifeMasters.forEach((r) => add(r.name, 'New Life Master ' + (r.club || ''), '#recognition', 'Recognition')); site.recognition.milestones.forEach((r) => add(r.name, r.achievement, '#recognition', 'Recognition')); }
+    if (shown('gallery')) (site.gallery || []).forEach((a) => add(a.title, (a.photos || []).map((p) => p.caption).join(' '), '#gallery', 'Photos'));
+    site.pages.filter((p) => p.custom && p.show).forEach((p) => add(p.title, p.body, '#' + p.id, 'Page'));
+    return idx;
+  }
+  function searchPage() {
+    const q = searchQuery.trim().toLowerCase();
+    const words = q.split(/\s+/).filter(Boolean);
+    const hits = !words.length ? [] : searchIndex().map((it) => {
+      const hay = (it.title + ' ' + it.text).toLowerCase();
+      if (!words.every((w) => hay.includes(w))) return null;
+      const score = words.reduce((s, w) => s + (it.title.toLowerCase().includes(w) ? 3 : 1), 0);
+      const pos = it.text.toLowerCase().indexOf(words[0]);
+      const snip = pos >= 0 ? (pos > 60 ? '…' : '') + it.text.slice(Math.max(0, pos - 60), pos + 120).replace(/\s+/g, ' ').trim() + '…' : '';
+      return Object.assign({ score, snip }, it);
+    }).filter(Boolean).sort((a, b) => b.score - a.score);
+    return `<div class="page-head"><h1>Search</h1></div>
+      <form class="sitesearch big" id="searchform2" role="search"><label class="sr" for="q2">Search this site</label><input type="search" id="q2" value="${esc(searchQuery)}" placeholder="Try: Elmira, Tuesday, bylaws, 499er"><button class="btn" type="submit">Search</button></form>
+      ${words.length ? `<p class="muted" role="status">${hits.length} result${hits.length === 1 ? '' : 's'} for “${esc(searchQuery)}”</p>
+      <ol class="results">${hits.map((h) => `<li><a href="${esc(h.href)}">${esc(h.title)}</a> <span class="pill past">${esc(h.kind)}</span>${h.snip ? `<p>${esc(h.snip)}</p>` : ''}</li>`).join('')}</ol>` : '<p class="muted">Type a club, town, day of the week or topic.</p>'}`;
+  }
+
+  function lightboxHTML() {
+    if (!lightbox) return '';
+    const al = (site.gallery || []).find((a) => a.id === lightbox.album); if (!al) return '';
+    const ph = al.photos[lightbox.i]; if (!ph) return '';
+    return `<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo ${lightbox.i + 1} of ${al.photos.length}">
+      <div class="lb-bar"><span>${esc(al.title)} · ${lightbox.i + 1} of ${al.photos.length}</span><button class="btn" data-act="lb-close">Close ✕</button></div>
+      <img src="${esc(ph.url)}" alt="${esc(ph.caption || al.title)}">${ph.caption ? `<p>${esc(ph.caption)}</p>` : ''}
+      <div class="btnrow lb-nav"><button class="btn alt" data-act="lb-prev" ${lightbox.i === 0 ? 'disabled' : ''}>← Previous</button><button class="btn alt" data-act="lb-next" ${lightbox.i === al.photos.length - 1 ? 'disabled' : ''}>Next →</button></div></div>`;
+  }
+  function renderLightbox() {
+    $('#lb').innerHTML = lightboxHTML();
+    document.body.style.overflow = lightbox ? 'hidden' : '';
+    if (lightbox) $('#lb [data-act="lb-close"]').focus();
+  }
+
+  function suggestForm() {
+    if (!site.settings.showSuggest) return '';
+    const pages = visiblePages().map((p) => p.title);
+    return panel(`<h2 id="suggest">${esc(site.content.suggestTitle)}</h2><p>${esc(site.content.suggestText)}</p>
+      <form id="suggestform" class="form" novalidate>
+        <div class="field"><label for="sg-msg">Your suggestion</label><textarea id="sg-msg" rows="5" required></textarea></div>
+        <div class="field"><label for="sg-page">Which page is it about?</label><select id="sg-page"><option value="">The whole site / not sure</option>${pages.map((t) => `<option>${esc(t)}</option>`).join('')}</select></div>
+        <div class="row2"><div class="field"><label for="sg-name">Your name (optional)</label><input type="text" id="sg-name" autocomplete="name"></div>
+        <div class="field"><label for="sg-email">Your email (optional)</label><input type="email" id="sg-email" autocomplete="email" aria-describedby="sg-email-h"><span class="help" id="sg-email-h">Only if you'd like a reply.</span></div></div>
+        <div class="hp" aria-hidden="true"><label for="sg-web">Leave this empty</label><input type="text" id="sg-web" tabindex="-1" autocomplete="off"></div>
+        <div><button class="btn green" type="submit">Send suggestion</button></div>
+      </form><div id="suggestmsg" role="status"></div>`, 'signup-panel');
+  }
+
+  function renderPublic(id) {
+    if (id === 'search') return searchPage();
+    if (id.startsWith('t-')) { const t = site.tournaments.find((x) => 't-' + x.id === id); if (t) return tournamentPage(t); }
+    const p = site.pages.find((x) => x.id === id);
+    if (p && p.custom) return head(p.title) + panel(`<div class="rich">${md(p.body)}</div>`);
+    if (PAGES[id] && (!p || p.show || id === 'home' || token)) return PAGES[id]();
+    return `<h1>Page not found</h1><p>That page is not on this site. <a href="#home">Go to the home page</a>.</p>`;
+  }
+
+  // ---------- render ----------
+  function render(scrollTop) {
+    const r = route();
+    renderChrome();
+    $('#view').innerHTML = r === 'admin' ? renderAdmin() : renderPublic(r);
+    if (scrollTop) { window.scrollTo(0, 0); }
+  }
+  function toast(msg) {
+    const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); t.textContent = msg;
+    document.body.appendChild(t); setTimeout(() => t.remove(), 3200);
+  }
+  function markDirty() { if (!dirty) { dirty = true; renderChrome(); } }
+  function logout(expired) {
+    token = null; ss.del('u112-token');
+    if (!expired) { user = null; ss.del('u112-user'); }
+    if (!expired) { dirty = false; }
+    render();
+  }
+
+  // Admin rendering and editing are defined in admin.js (same scope via the build).
+  // =====================================================================
+  // ADMIN PANEL (inserted into app.js at build time; shares its scope)
+  // =====================================================================
+  // Which tabs each kind of account sees. The server enforces the same limits on save.
+  const ALL_TABS = [
+    ['alert', 'Urgent notice'],
+    ['branding', 'Look & logo'],
+    ['layout', 'Menu & home layout'],
+    ['home', 'Home page & news'],
+    ['tournaments', 'Tournaments'],
+    ['clubs', 'Clubs'],
+    ['learn', 'Learn to Play'],
+    ['gallery', 'Photos'],
+    ['text', 'Page text'],
+    ['people', 'Board & documents'],
+    ['recognition', 'Player recognition'],
+    ['email', 'Email reminders'],
+    ['suggestions', 'Website suggestions'],
+    ['accounts', 'Editor accounts'],
+    ['backup', 'Backup, password & handoff'],
+  ];
+  const ROLES = {
+    owner: { label: 'Webmaster (everything)', tabs: ALL_TABS.map((t) => t[0]) },
+    editor: { label: 'Editor (all content, no accounts)', tabs: ALL_TABS.map((t) => t[0]).filter((t) => t !== 'accounts' && t !== 'suggestions') },
+    club: { label: 'Club manager (own club only)', tabs: ['myclubs', 'password'] },
+    tournament: { label: 'Tournament chair (own tournaments only)', tabs: ['mytournaments', 'password'] },
+  };
+  const EXTRA_TABS = { myclubs: 'My club', mytournaments: 'My tournaments', password: 'My password' };
+  function myTabs() {
+    const r = ROLES[(user && user.role) || 'owner'] || ROLES.club;
+    return r.tabs.map((k) => [k, (ALL_TABS.find((t) => t[0] === k) || [k, EXTRA_TABS[k]])[1]]);
+  }
+
+  const PRESETS = {
+    'Finger Lakes': { primary: '#1C4966', secondary: '#2F6B4F', accent: '#C08A2B', bg: '#F3F7F6', surface: '#FFFFFF', text: '#15232B' },
+    'Navy & gold': { primary: '#1B2A4A', secondary: '#2C4270', accent: '#C9A227', bg: '#F6F5F1', surface: '#FFFFFF', text: '#161B26' },
+    'Card table': { primary: '#1E5631', secondary: '#7A1F2B', accent: '#C9A227', bg: '#F3F6F1', surface: '#FFFFFF', text: '#14201A' },
+    'High contrast': { primary: '#000000', secondary: '#003A70', accent: '#B8860B', bg: '#FFFFFF', surface: '#FFFFFF', text: '#000000' },
+  };
+  const COLOR_LABELS = { primary: 'Main color (header, buttons)', secondary: 'Menu bar color', accent: 'Highlight color', bg: 'Page background', surface: 'Card background', text: 'Text color' };
+  const DAY_OPTS = DAY_KEYS.map((d, i) => [d, DAYS[i]]);
+
+  const SCHEMAS = {
+    news: { noun: 'news item', title: (i) => i.title || 'Untitled news item', sub: (i) => fmtDate(i.date) + (i.pinned ? ' · pinned' : '') + (!newsLive(i) ? ' · expired' : ''),
+      blank: () => ({ title: '', date: todayISO(), body: '', pinned: false, expires: '' }),
+      fields: [{ k: 'title', l: 'Headline' }, { row: [{ k: 'date', l: 'Date', t: 'date' }, { k: 'expires', l: 'Hide after (optional)', t: 'date', h: 'The item disappears from the site after this date.' }] }, { k: 'pinned', l: 'Pin to the top of the home page', t: 'check' }, { k: 'body', l: 'Text', t: 'textarea', h: MDHELP }] },
+    tournaments: { noun: 'tournament', title: (i) => i.name || 'New tournament', sub: (i) => fmtRange(i.start, i.end) + (i.city ? ' · ' + i.city : ''),
+      blank: () => ({ name: '', type: 'Sectional', start: '', end: '', city: '', venue: '', address: '', sanction: '', flyerUrl: '', resultsUrl: '', notes: '', sessions: [], hotels: '', food: '', parking: '', partnership: '', contacts: '', details: '', bulletins: [] }),
+      fields: [
+        { k: 'name', l: 'Tournament name' },
+        { k: 'type', l: 'Type', t: 'select', o: ['Sectional', 'NAP', 'GNT', 'STaC', 'Regional', 'Unit game', 'Other'] },
+        { row: [{ k: 'start', l: 'First day', t: 'date' }, { k: 'end', l: 'Last day', t: 'date', h: 'Same as first day for a one-day event.' }] },
+        { row: [{ k: 'city', l: 'City' }, { k: 'venue', l: 'Venue name' }] },
+        { k: 'address', l: 'Street address', h: 'Used for the Directions button.' },
+        { k: 'sanction', l: 'ACBL sanction number', h: 'The 7-digit number on the ACBL flyer, e.g. 2610314. With it, the flyer and results links are filled in automatically.' },
+        { k: 'flyerUrl', l: 'Flyer or registration link (optional)', t: 'url', h: 'Leave blank to use the ACBL flyer for the sanction number.' },
+        { k: 'resultsUrl', l: 'Results link (optional)', t: 'url', h: 'Leave blank to use ACBL Live results for the sanction number.' },
+        { k: 'notes', l: 'Short note (optional)', h: 'One line shown in the tournament list, e.g. "Non-Life Master and 499er events".' },
+        { sep: 'Tournament page', h: 'Anything you fill in below gives this tournament its own page with a Details button.' },
+        { k: 'sessions', l: 'Schedule of events', t: 'sublist', noun: 'session', blank: { date: '', time: '', event: '' }, cols: [{ k: 'date', l: 'Day', t: 'date' }, { k: 'time', l: 'Start time', t: 'time' }, { k: 'event', l: 'Event', ph: 'e.g. Open Pairs (stratified)' }] },
+        { k: 'details', l: 'About this tournament', t: 'textarea', rows: 5, h: MDHELP },
+        { k: 'partnership', l: 'Partnerships', t: 'textarea', rows: 3, h: 'e.g. who to call for a partner, and by when.' },
+        { k: 'hotels', l: 'Hotels', t: 'textarea', rows: 3 },
+        { k: 'food', l: 'Food and lunch', t: 'textarea', rows: 3 },
+        { k: 'parking', l: 'Parking and accessibility', t: 'textarea', rows: 3 },
+        { k: 'contacts', l: 'Contacts', t: 'textarea', rows: 3, h: 'Chair, partnership chair, director.' },
+        { k: 'bulletins', l: 'Daily bulletins', t: 'sublist', noun: 'bulletin', blank: { title: '', date: '', url: '' }, cols: [{ k: 'title', l: 'Title', ph: 'e.g. Saturday bulletin' }, { k: 'date', l: 'Date', t: 'date' }, { k: 'url', l: 'File', t: 'file' }] },
+      ], derived: true },
+    clubs: { noun: 'club', title: (i) => i.name || 'New club', sub: (i) => ((i.games || []).length ? (i.games || []).map((g) => g.day).join(', ') : 'no games listed'),
+      blank: () => ({ name: '', city: '', clubNumber: '', schedule: '', address: '', contact: '', website: '', liveUrl: '', tcgUrl: '', noTcg: false, games: [] }),
+      fields: [
+        { row: [{ k: 'name', l: 'Club name' }, { k: 'city', l: 'City' }] },
+        { k: 'games', l: 'Weekly games', t: 'sublist', noun: 'game', blank: { day: 'Mon', time: '', label: '' }, cols: [{ k: 'day', l: 'Day', t: 'select', o: DAY_OPTS }, { k: 'time', l: 'Start time', t: 'time' }, { k: 'label', l: 'Game', ph: 'e.g. Open pairs, 499er' }], h: 'These power "Where can I play today?" on the home page and the day filter on the Clubs page.' },
+        { k: 'schedule', l: 'Schedule notes (optional)', h: 'e.g. "No game on holidays" or "Reservations requested".' },
+        { k: 'address', l: 'Street address', h: 'Adds a Directions link.' },
+        { row: [{ k: 'contact', l: 'Contact (name / phone)' }, { k: 'website', l: 'Club website', t: 'url' }] },
+        { k: 'clubNumber', l: 'ACBL club number', h: 'With this, the Live for Clubs and Common Game links are filled in automatically.' },
+        { k: 'liveUrl', l: 'Results link override (optional)', t: 'url', h: 'Only if the automatic ACBL Live for Clubs link is wrong.' },
+        { k: 'tcgUrl', l: 'Common Game link override (optional)', t: 'url' },
+        { k: 'noTcg', l: 'This club does not play the Common Game', t: 'check' },
+      ], derived: true },
+    board: { noun: 'board member', title: (i) => i.name || 'New board member', sub: (i) => i.role || '',
+      blank: () => ({ name: '', role: '', email: '' }),
+      fields: [{ row: [{ k: 'name', l: 'Name' }, { k: 'role', l: 'Position' }] }, { k: 'email', l: 'Email (optional, shown publicly)', t: 'email' }] },
+    documents: { noun: 'document', title: (i) => i.title || 'New document', sub: (i) => (i.category || '') + (i.date ? ' · ' + fmtDate(i.date) : ''),
+      blank: () => ({ title: '', category: 'Minutes', date: todayISO(), url: '' }),
+      fields: [{ k: 'title', l: 'Title' }, { row: [{ k: 'category', l: 'Category', t: 'select', o: ['Bylaws', 'Minutes', 'Financial reports', 'Tournament reports', 'Forms', 'Other'] }, { k: 'date', l: 'Date', t: 'date' }] }, { k: 'url', l: 'File', t: 'file', h: 'Upload a PDF or Word file, or paste a link (e.g. a Google Drive share link).' }] },
+    lifeMasters: { noun: 'Life Master', title: (i) => i.name || 'New Life Master', sub: (i) => fmtDate(i.date),
+      blank: () => ({ name: '', club: '', date: todayISO() }),
+      fields: [{ row: [{ k: 'name', l: 'Player' }, { k: 'club', l: 'Home club' }] }, { k: 'date', l: 'Date', t: 'date' }] },
+    milestones: { noun: 'milestone', title: (i) => i.name || 'New milestone', sub: (i) => i.achievement || '',
+      blank: () => ({ name: '', achievement: '', date: todayISO() }),
+      fields: [{ row: [{ k: 'name', l: 'Player' }, { k: 'achievement', l: 'Achievement', h: 'e.g. "Silver Life Master" or "500 masterpoints"' }] }, { k: 'date', l: 'Date', t: 'date' }] },
+    links: { noun: 'link', title: (i) => i.title || 'New link', sub: () => '',
+      blank: () => ({ title: '', url: '' }), fields: [{ k: 'title', l: 'Link text' }, { k: 'url', l: 'Address', t: 'url' }] },
+    partnerLinks: { noun: 'footer link', title: (i) => i.name || 'New link', sub: () => '',
+      blank: () => ({ name: '', url: '', img: '' }), fields: [{ k: 'name', l: 'Name' }, { k: 'url', l: 'Address', t: 'url' }, { k: 'img', l: 'Logo image (optional)', t: 'image' }] },
+    teachers: { noun: 'teacher or class', title: (i) => i.name || 'New teacher or class', sub: (i) => i.area || '',
+      blank: () => ({ name: '', area: '', when: '', contact: '', url: '', notes: '' }),
+      fields: [{ row: [{ k: 'name', l: 'Teacher or class name' }, { k: 'area', l: 'Where', h: 'Town or club' }] }, { row: [{ k: 'when', l: 'When', h: 'e.g. "Tuesdays in October, 10 am"' }, { k: 'contact', l: 'Contact' }] }, { k: 'url', l: 'Link (optional)', t: 'url' }, { k: 'notes', l: 'Notes', t: 'textarea', rows: 3 }] },
+    albums: { noun: 'photo album', title: (i) => i.title || 'New album', sub: (i) => (i.photos || []).length + ' photos' + (i.date ? ' · ' + fmtDate(i.date) : ''),
+      blank: () => ({ title: '', date: todayISO(), photos: [] }),
+      fields: [{ row: [{ k: 'title', l: 'Album title', h: 'e.g. "Rochester Fall Sectional 2026"' }, { k: 'date', l: 'Date', t: 'date' }] }, { k: 'photos', l: 'Photos', t: 'photos' }] },
+  };
+
+  // ---- path helpers ("tournaments.3.name") ----
+  function getPath(p) { return p.split('.').reduce((o, k) => (o == null ? o : o[k]), site); }
+  function setPath(p, v) { const ks = p.split('.'), last = ks.pop(); const o = ks.reduce((o, k) => o[k], site); o[last] = v; }
+  const fid = (path) => 'f-' + path.replace(/\./g, '-');
+
+  // ---- field rendering ----
+  function inputHTML(t, path, v, extra = '') {
+    return `<input type="${t}" id="${fid(path)}" data-path="${path}" value="${esc(v)}"${extra}>`;
+  }
+  function selectHTML(opts, path, v, extra = '') {
+    return `<select id="${fid(path)}" data-path="${path}"${extra}>${opts.map((o) => { const val = Array.isArray(o) ? o[0] : o, lab = Array.isArray(o) ? o[1] : o; return `<option value="${esc(val)}" ${String(v) === String(val) ? 'selected' : ''}>${esc(lab)}</option>`; }).join('')}</select>`;
+  }
+  function fileControl(path, v, isImg, label, kind) {
+    const id = fid(path);
+    const prev = v ? (isImg ? `<img class="imgprev" src="${esc(v)}" alt="Current image">` : `<a href="${esc(v)}">${v.startsWith('data:') ? 'Uploaded file' : esc(v.length > 60 ? v.slice(0, 57) + '…' : v)}</a>`) : '<span class="muted">None yet</span>';
+    return `<div>${prev}</div><div class="btnrow"><label class="btn small alt" for="${id}-up">Upload ${isImg ? 'image' : 'file'}</label><input class="sr" type="file" id="${id}-up" data-upload="${path}" data-kind="${kind || (isImg ? 'image' : 'file')}" accept="${isImg ? 'image/*' : '.pdf,.doc,.docx,.xls,.xlsx,.txt,image/*'}">
+      ${v ? `<button class="btn small danger" data-act="clearfield" data-path="${path}">Remove</button>` : ''}</div>
+      ${!isImg ? `<input type="url" id="${id}" data-path="${path}" value="${v && !v.startsWith('data:') ? esc(v) : ''}" placeholder="…or paste a link" aria-label="${esc(label)} link">` : ''}`;
+  }
+  function fieldHTML(f, base) {
+    if (f.row) return `<div class="row2">${f.row.map((x) => fieldHTML(x, base)).join('')}</div>`;
+    if (f.sep) return `<div class="sep"><h3>${esc(f.sep)}</h3>${f.h ? `<p class="help">${esc(f.h)}</p>` : ''}</div>`;
+    const path = base + '.' + f.k, id = fid(path), v = getPath(path);
+    const help = f.h ? `<span class="help" id="${id}-h">${esc(f.h)}</span>` : '';
+    const dby = f.h ? ` aria-describedby="${id}-h"` : '';
+    const t = f.t || 'text';
+    if (t === 'check') return `<div class="field check"><input type="checkbox" id="${id}" data-path="${path}" ${v ? 'checked' : ''}><label for="${id}">${esc(f.l)}</label></div>`;
+    if (t === 'textarea') return `<div class="field"><label for="${id}">${esc(f.l)}</label><textarea id="${id}" data-path="${path}"${dby} rows="${f.rows || 7}">${esc(v)}</textarea>${help}</div>`;
+    if (t === 'select') return `<div class="field"><label for="${id}">${esc(f.l)}</label>${selectHTML(f.o, path, v)}${help}</div>`;
+    if (t === 'image' || t === 'file' || t === 'icon') return `<div class="field"><span class="lbl">${esc(f.l)}</span>${fileControl(path, v, t !== 'file', f.l, t === 'icon' ? 'icon' : null)}${help}</div>`;
+    if (t === 'sublist') {
+      const rows = v || [];
+      return `<fieldset class="field sublist"><legend class="lbl">${esc(f.l)}</legend>${help}
+        ${rows.length ? `<ol class="subrows">${rows.map((r, j) => `<li>${f.cols.map((c) => {
+          const cp = path + '.' + j + '.' + c.k, lab = `${c.l} (${f.noun} ${j + 1})`;
+          if (c.t === 'select') return `<div class="field"><label for="${fid(cp)}">${esc(c.l)}</label>${selectHTML(c.o, cp, r[c.k])}</div>`;
+          if (c.t === 'file') return `<div class="field wide"><span class="lbl">${esc(c.l)}</span>${fileControl(cp, r[c.k], false, lab)}</div>`;
+          return `<div class="field${c.t ? '' : ' wide'}"><label for="${fid(cp)}">${esc(c.l)}</label>${inputHTML(c.t || 'text', cp, r[c.k], c.ph ? ` placeholder="${esc(c.ph)}"` : '')}</div>`;
+        }).join('')}<button class="btn small danger" data-act="subdel" data-path="${path}" data-i="${j}">Remove ${esc(f.noun)}</button></li>`).join('')}</ol>` : `<p class="empty">No ${esc(f.noun)}s yet.</p>`}
+        <div><button class="btn small green" data-act="subadd" data-path="${path}" data-blank='${esc(JSON.stringify(f.blank))}'>Add a ${esc(f.noun)}</button></div></fieldset>`;
+    }
+    if (t === 'photos') {
+      const ph = v || [];
+      return `<fieldset class="field sublist"><legend class="lbl">${esc(f.l)}</legend>
+        ${ph.length ? `<ol class="photoedit">${ph.map((p, j) => `<li><img src="${esc(p.url)}" alt=""><div class="field"><label for="${fid(path + '.' + j + '.caption')}">Caption</label>${inputHTML('text', path + '.' + j + '.caption', p.caption, ' placeholder="Who and what is in the photo"')}</div>
+          <div class="btnrow"><button class="btn small alt" data-act="up" data-list="${path}" data-i="${j}" ${j === 0 ? 'disabled' : ''}>Earlier</button><button class="btn small alt" data-act="down" data-list="${path}" data-i="${j}" ${j === ph.length - 1 ? 'disabled' : ''}>Later</button><button class="btn small danger" data-act="subdel" data-path="${path}" data-i="${j}">Remove</button></div></li>`).join('')}</ol>` : '<p class="empty">No photos yet.</p>'}
+        <div class="btnrow"><label class="btn small green" for="${id}-multi">Add photos</label><input class="sr" type="file" multiple accept="image/*" id="${id}-multi" data-multi="${path}"></div>
+        <span class="help">You can pick several photos at once. Large photos are shrunk automatically. Captions help people using screen readers.</span></fieldset>`;
+    }
+    return `<div class="field"><label for="${id}">${esc(f.l)}</label>${inputHTML(t, path, v, dby)}${help}</div>`;
+  }
+
+  function derivedHTML(listKey, i) {
+    const it = getPath(listKey)[i];
+    if (listKey === 'tournaments') {
+      const L = tLinks(it), s = String(it.sanction || '').trim();
+      const warn = s && !validSanction(s) ? '<div style="color:#9B1C1C;font-weight:700">A sanction number is 7 digits. Check the ACBL flyer.</div>' : '';
+      return `${warn}<div><strong>Status:</strong> ${({ upcoming: 'Upcoming', live: 'Playing now', past: 'Completed' })[tStatus(it)]}</div>
+        <div><strong>${L.flyerLabel}:</strong> ${L.flyer ? `<a href="${esc(L.flyer)}">${esc(L.flyer)}</a>` : 'none'}</div>
+        <div><strong>Results:</strong> ${L.results ? `<a href="${esc(L.results)}">${esc(L.results)}</a>` : 'none'}</div>
+        <div><strong>Tournament page:</strong> ${hasDetails(it) ? `<a href="#t-${esc(it.id)}">view it</a>` : 'not yet (fill in the Tournament page section)'}</div>`;
+    }
+    const L = cLinks(it);
+    return `<div><strong>Results link:</strong> ${L.live ? `<a href="${esc(L.live)}">${esc(L.live)}</a>` : 'none'}</div><div><strong>Common Game:</strong> ${L.tcg ? `<a href="${esc(L.tcg)}">${esc(L.tcg)}</a>` : 'none'}</div>`;
+  }
+
+  // opts: openIndex, extraButtons, only (array of ids: show just these), locked (no add/move/delete)
+  function listEditor(schemaKey, listPath, opts = {}) {
+    const S = SCHEMAS[schemaKey], arr = getPath(listPath) || [];
+    const items = arr.map((it, i) => {
+      if (opts.only && !opts.only.includes(it.id)) return '';
+      const key = listPath + '|' + i;
+      const open = opts.openIndex === i || (opts.only && opts.only.length === 1) || pendingDelete === key ? ' open' : '';
+      const confirm = pendingDelete === key
+        ? `<div class="confirm" role="alert">Delete this ${S.noun}? <button class="btn small danger" data-act="del-yes" data-list="${listPath}" data-i="${i}">Yes, delete</button><button class="btn small alt" data-act="del-no">Keep it</button></div>`
+        : `<button class="btn small danger" data-act="del" data-list="${listPath}" data-i="${i}">Delete</button>`;
+      const tools = opts.locked ? '' : `<div class="item-tools"><button class="btn small alt" data-act="up" data-list="${listPath}" data-i="${i}" ${i === 0 ? 'disabled' : ''}>Move up</button><button class="btn small alt" data-act="down" data-list="${listPath}" data-i="${i}" ${i === arr.length - 1 ? 'disabled' : ''}>Move down</button>${confirm}</div>`;
+      return `<details class="item"${open}><summary><span data-sum="${listPath}.${i}" data-schema="${schemaKey}">${esc(S.title(it))}</span><span class="sub" data-subsum="${listPath}.${i}">${esc(S.sub(it))}</span></summary>
+        <div class="body">${S.fields.map((f) => fieldHTML(f, listPath + '.' + i)).join('')}
+        ${S.derived ? `<div class="derived" id="derived-${listPath.replace(/\./g, '-')}-${i}" aria-live="polite">${derivedHTML(listPath, i)}</div>` : ''}
+        ${tools}</div></details>`;
+    }).join('');
+    return `<div class="stack" style="gap:.6rem">
+      ${opts.locked ? '' : `<div class="btnrow"><button class="btn green" data-act="add" data-list="${listPath}" data-schema="${schemaKey}">Add a ${S.noun}</button>${opts.extraButtons || ''}</div>`}
+      ${items || `<p class="empty">${opts.locked ? 'Nothing has been assigned to your account yet. Ask the webmaster.' : `Nothing here yet. Press "Add a ${S.noun}".`}</p>`}</div>`;
+  }
+  let openAfterAdd = null; // {list, i}
+  function openIdx(list) { return openAfterAdd && openAfterAdd.list === list ? openAfterAdd.i : -1; }
+
+  function orderList(listPath, row) {
+    const arr = getPath(listPath);
+    return `<ol class="orderlist">${arr.map((it, i) => `<li>
+      <button class="btn small alt" data-act="up" data-list="${listPath}" data-i="${i}" ${i === 0 ? 'disabled' : ''} aria-label="Move up">▲</button>
+      <button class="btn small alt" data-act="down" data-list="${listPath}" data-i="${i}" ${i === arr.length - 1 ? 'disabled' : ''} aria-label="Move down">▼</button>
+      ${row(it, i)}</li>`).join('')}</ol>`;
+  }
+
+  // async-loaded admin data (accounts, subscribers)
+  let accounts = null, editingUser = null, subs = null, campaignList = null, mailDraft = null, sugg = null;
+
+  function passwordPanel() {
+    if (mode !== 'live') return `<div class="panel"><h3>Change your password</h3><p>This is the demo copy. Demo passwords can't be changed. On the live site you change yours here.</p></div>`;
+    return `<div class="panel"><h3>Change your password</h3><div class="row2"><div class="field"><label for="pw-cur">Current password</label><input type="password" id="pw-cur" autocomplete="current-password"></div><div class="field"><label for="pw-new">New password (10+ characters)</label><input type="password" id="pw-new" autocomplete="new-password"></div></div><div class="btnrow" style="margin-top:.75rem"><button class="btn" data-act="changepw">Change password</button></div></div>`;
+  }
+
+  // ---- tabs ----
+  const ADMIN_TABS = {
+    alert() {
+      const A = site.settings.alert;
+      const live = A.on && A.text && (!A.until || todayISO() <= A.until);
+      return `<h2>Urgent notice</h2><div class="form">
+        <p>Shows a bright bar across the top of every page. Use it for cancellations, weather closures and venue changes.</p>
+        <div class="notice"><p><strong>Right now:</strong> ${live ? 'the notice is showing on the site' : 'no notice is showing'}${A.on && A.until && todayISO() > A.until ? ' (it switched off after ' + esc(fmtDate(A.until)) + ')' : ''}.</p></div>
+        ${fieldHTML({ k: 'on', l: 'Show the notice', t: 'check' }, 'settings.alert')}
+        ${fieldHTML({ k: 'text', l: 'Message', h: 'Keep it short, e.g. "Syracuse game cancelled today (Tuesday) because of snow."' }, 'settings.alert')}
+        <div class="row2">${fieldHTML({ k: 'level', l: 'Style', t: 'select', o: [['urgent', 'Urgent (red)'], ['warning', 'Warning (yellow)'], ['info', 'Information (blue)']] }, 'settings.alert')}
+        ${fieldHTML({ k: 'until', l: 'Switch off after (optional)', t: 'date', h: 'The notice disappears on its own after this date.' }, 'settings.alert')}</div>
+        ${fieldHTML({ k: 'link', l: 'Link for more information (optional)', t: 'url' }, 'settings.alert')}
+        <p class="help">Press Save for members to see the change.</p></div>`;
+    },
+    branding() {
+      const st = site.settings, c = st.colors;
+      const warn = [];
+      if (contrast(c.text, c.bg) < 7) warn.push('Text on the page background is below the high-readability level (7:1). Consider a darker text color.');
+      if (contrast(c.primary, onColor(c.primary)) < 4.5) warn.push('Button and header text will be hard to read on the main color.');
+      if (contrast(c.secondary, onColor(c.secondary)) < 4.5) warn.push('Menu text will be hard to read on the menu bar color.');
+      return `<h2>Look & logo</h2><div class="form">
+        ${fieldHTML({ k: 'siteName', l: 'Site name' }, 'settings')}
+        ${fieldHTML({ k: 'tagline', l: 'Tagline (top bar)' }, 'settings')}
+        ${fieldHTML({ k: 'logo', l: 'Logo', t: 'image' }, 'settings')}
+        ${fieldHTML({ k: 'logoAlt', l: 'Logo description for screen readers' }, 'settings')}
+        ${fieldHTML({ k: 'favicon', l: 'Site icon (the small picture in browser tabs and bookmarks)', t: 'icon', h: 'Optional. A square image works best, at least 180 × 180 pixels. Without one, the site uses a "112" badge in your main color.' }, 'settings')}
+        <div class="field"><span class="lbl">Color presets</span><div class="presets">${Object.keys(PRESETS).map((n) => `<button class="preset" data-act="preset" data-name="${esc(n)}"><i style="background:${PRESETS[n].primary}"></i><i style="background:${PRESETS[n].secondary}"></i>${esc(n)}</button>`).join('')}</div></div>
+        <div class="field"><span class="lbl">Colors</span><div class="swatches">${Object.keys(COLOR_LABELS).map((k) => `<div class="swatch"><input type="color" id="col-${k}" data-path="settings.colors.${k}" value="${esc(c[k])}"><label for="col-${k}">${COLOR_LABELS[k]}<code>${esc(c[k])}</code></label></div>`).join('')}</div>
+        <div id="contrast-warn" aria-live="polite">${warn.length ? `<div class="notice"><p><strong>Readability check:</strong> ${warn.join(' ')}</p></div>` : '<p class="help" style="color:var(--secondary);font-weight:700">Readability check: colors pass.</p>'}</div></div>
+        <div class="row2">${fieldHTML({ k: 'font', l: 'Text typeface', t: 'select', o: Object.keys(FONTS).filter((k) => !FONTS[k].headingOnly).map((k) => [k, FONTS[k].label]) }, 'settings')}
+        ${fieldHTML({ k: 'headingFont', l: 'Heading typeface', t: 'select', o: [['same', 'Same as text']].concat(Object.keys(FONTS).map((k) => [k, FONTS[k].label])) }, 'settings')}</div>
+        <div class="fontsample" aria-hidden="true"><div class="fs-h">Rochester Fall Sectional</div><div>Open Pairs start at 10 am. Bring your partner and your convention card. ♠ A K Q <span class="red">♥ J 10</span></div></div>
+        ${fieldHTML({ k: 'baseSize', l: 'Standard text size', t: 'select', o: [['18', 'Medium (18px)'], ['20', 'Large (20px), recommended'], ['22', 'Larger (22px)'], ['24', 'Extra large (24px)']] }, 'settings')}
+        <div class="row2">${fieldHTML({ k: 'headerStyle', l: 'Header layout', t: 'select', o: [['left', 'Logo on the left'], ['center', 'Logo centered']] }, 'settings')}
+        ${fieldHTML({ k: 'showSuits', l: 'Show ♠♥♦♣ in the top bar', t: 'check' }, 'settings')}</div>
+        ${fieldHTML({ k: 'footerText', l: 'Footer text', t: 'textarea', rows: 3 }, 'settings')}
+        ${fieldHTML({ k: 'contactEmail', l: 'Unit contact email (optional)', t: 'email' }, 'settings')}
+        <h3>Footer links and logos</h3>${listEditor('partnerLinks', 'settings.partnerLinks')}</div>`;
+    },
+    layout() {
+      return `<h2>Menu & home layout</h2><div class="form">
+        <h3>Menu</h3><p class="help">Rename pages, change their order, or hide the ones you do not use. Hidden pages keep their content.</p>
+        ${orderList('pages', (p, i) => `<input type="text" data-path="pages.${i}.title" value="${esc(p.title)}" aria-label="Menu name for ${esc(p.title)}">
+          ${p.id === 'home' ? '<span class="tag">always shown</span>' : `<label style="display:flex;gap:.4rem;align-items:center"><input type="checkbox" data-path="pages.${i}.show" ${p.show ? 'checked' : ''} style="width:1.3rem;height:1.3rem"> Show</label>`}
+          <span class="tag">${p.custom ? 'your page' : 'built-in'}</span>
+          ${p.custom ? (pendingDelete === 'pages|' + i ? `<span class="confirm">Delete page? <button class="btn small danger" data-act="del-yes" data-list="pages" data-i="${i}">Yes</button><button class="btn small alt" data-act="del-no">No</button></span>` : `<button class="btn small danger" data-act="del" data-list="pages" data-i="${i}">Delete</button>`) : ''}`)}
+        <div class="btnrow"><button class="btn green" data-act="addpage">Add a new page</button></div>
+        <p class="help">New pages get their text on the Page text tab.</p>
+        <h3>Home page sections</h3><p class="help">Choose which blocks appear on the home page and in what order.</p>
+        ${orderList('settings.homeSections', (s, i) => `<label style="display:flex;gap:.5rem;align-items:center;flex:1"><input type="checkbox" data-path="settings.homeSections.${i}.show" ${s.show ? 'checked' : ''} style="width:1.3rem;height:1.3rem"> ${esc(s.label)}</label>`)}
+      </div>`;
+    },
+    home() {
+      return `<h2>Home page & news</h2><div class="form">
+        ${fieldHTML({ k: 'welcomeTitle', l: 'Welcome heading' }, 'content')}
+        ${fieldHTML({ k: 'welcome', l: 'Welcome message', t: 'textarea', h: MDHELP }, 'content')}
+        <h3>News & announcements</h3><p class="help">The six newest items show on the home page. Pinned items come first. Items with a "Hide after" date disappear on their own.</p>
+        ${listEditor('news', 'news', { openIndex: openIdx('news') })}</div>`;
+    },
+    tournaments() {
+      return `<h2>Tournaments</h2><div class="form">
+        <div class="notice"><p><strong>Automatic results:</strong> enter the 7-digit ACBL sanction number and the site links the ACBL flyer before the tournament, then switches to the ACBL Live results link on the first day of play. Completed tournaments move to Past results on their own.</p></div>
+        ${fieldHTML({ k: 'tournamentsIntro', l: 'Introduction at the top of the page', t: 'textarea', rows: 3 }, 'content')}
+        ${listEditor('tournaments', 'tournaments', { openIndex: openIdx('tournaments'), extraButtons: '<button class="btn alt" data-act="sortlist" data-list="tournaments">Sort by date</button>' })}</div>`;
+    },
+    mytournaments() {
+      return `<h2>My tournaments</h2><div class="form"><p>You can update the tournaments assigned to you: schedule, hotels, bulletins and links. Press Save when you're done.</p>
+        ${listEditor('tournaments', 'tournaments', { only: (user && user.tournaments) || [], locked: true })}</div>`;
+    },
+    clubs() {
+      return `<h2>Clubs</h2><div class="form">
+        ${fieldHTML({ k: 'clubsIntro', l: 'Introduction at the top of the page', t: 'textarea', rows: 3 }, 'content')}
+        ${listEditor('clubs', 'clubs', { openIndex: openIdx('clubs') })}</div>`;
+    },
+    myclubs() {
+      return `<h2>My club</h2><div class="form"><p>Keep your game days, times and contact details current. Press Save when you're done.</p>
+        ${listEditor('clubs', 'clubs', { only: (user && user.clubs) || [], locked: true })}</div>`;
+    },
+    learn() {
+      return `<h2>Learn to Play</h2><div class="form">
+        ${fieldHTML({ k: 'learn', l: 'Introduction', t: 'textarea', rows: 5, h: MDHELP }, 'content')}
+        <h3>Teachers and classes</h3>${listEditor('teachers', 'learn.teachers', { openIndex: openIdx('learn.teachers') })}
+        <h3>Learn-at-home links</h3>${listEditor('links', 'learn.resources', { openIndex: openIdx('learn.resources') })}</div>`;
+    },
+    gallery() {
+      return `<h2>Photos</h2><div class="form">
+        ${fieldHTML({ k: 'galleryIntro', l: 'Introduction', t: 'textarea', rows: 2 }, 'content')}
+        ${mode === 'live' ? '' : '<div class="notice"><p>Demo copy: photos are stored in this browser, which holds only a few dozen. The live site holds up to 1 GB.</p></div>'}
+        ${listEditor('albums', 'gallery', { openIndex: openIdx('gallery') })}</div>`;
+    },
+    text() {
+      const custom = site.pages.map((p, i) => [p, i]).filter(([p]) => p.custom);
+      return `<h2>Page text</h2><div class="form"><p class="help">${esc(MDHELP)}</p>
+        ${fieldHTML({ k: 'newplayers', l: 'New Players page', t: 'textarea', rows: 14 }, 'content')}
+        ${fieldHTML({ k: 'about', l: 'About the Unit page', t: 'textarea', rows: 8 }, 'content')}
+        ${fieldHTML({ k: 'contact', l: 'Contact page', t: 'textarea', rows: 5 }, 'content')}
+        ${fieldHTML({ k: 'recognitionIntro', l: 'Player Recognition introduction', t: 'textarea', rows: 3 }, 'content')}
+        ${fieldHTML({ k: 'documentsIntro', l: 'Board Documents introduction', t: 'textarea', rows: 3 }, 'content')}
+        ${fieldHTML({ k: 'signupTitle', l: 'Email sign-up heading' }, 'content')}
+        ${fieldHTML({ k: 'signupText', l: 'Email sign-up text', t: 'textarea', rows: 3 }, 'content')}
+        ${custom.length ? '<h3>Your pages</h3>' + custom.map(([p, i]) => fieldHTML({ k: 'body', l: p.title + ' page', t: 'textarea', rows: 10 }, 'pages.' + i)).join('') : '<p class="help">Pages you add on the Menu tab appear here.</p>'}</div>`;
+    },
+    people() {
+      return `<h2>Board & documents</h2><div class="form"><h3>Board members</h3>${listEditor('board', 'board', { openIndex: openIdx('board') })}
+        <h3>Board documents</h3>${listEditor('documents', 'documents', { openIndex: openIdx('documents') })}</div>`;
+    },
+    recognition() {
+      return `<h2>Player recognition</h2><div class="form"><h3>New Life Masters</h3>${listEditor('lifeMasters', 'recognition.lifeMasters', { openIndex: openIdx('recognition.lifeMasters') })}
+        <h3>Milestones and rank changes</h3>${listEditor('milestones', 'recognition.milestones', { openIndex: openIdx('recognition.milestones') })}
+        <h3>Standings links</h3>${listEditor('links', 'recognition.links')}</div>`;
+    },
+    email() {
+      if (subs === null) { loadSubs(); return '<h2>Email reminders</h2><p>Loading subscribers…</p>'; }
+      const upcoming = site.tournaments.filter((t) => tStatus(t) === 'upcoming').sort(byStart);
+      const d = mailDraft || { tid: '', subject: '', text: '', test: '' };
+      const partial = (campaignList || []).filter((c) => c.remaining > 0);
+      return `<h2>Email reminders</h2><div class="form">
+        ${mode === 'live' ? '' : '<div class="notice"><p>Demo copy: sign-ups are kept in this browser and sending is switched off. On the live site, emails go out through Resend once it is connected (README, step 9).</p></div>'}
+        <div class="panel"><h3>Subscribers: ${subs.length}</h3>
+          <p class="help">People sign up with the box on the home page. Everyone gets an unsubscribe link in each email.</p>
+          ${subs.length ? `<div class="tablewrap"><table><thead><tr><th scope="col">Email</th><th scope="col">Name</th><th scope="col">Since</th><th scope="col"><span class="sr">Remove</span></th></tr></thead><tbody>${subs.map((s) => `<tr><td>${esc(s.email)}</td><td>${esc(s.name || '')}</td><td>${esc(fmtDate(s.date))}</td><td><button class="btn small danger" data-act="unsub" data-email="${esc(s.email)}">Remove</button></td></tr>`).join('')}</tbody></table></div>` : '<p class="empty">No subscribers yet.</p>'}
+          <div class="row2" style="margin-top:1rem"><div class="field"><label for="addsub-email">Add an email by hand</label><input type="email" id="addsub-email"></div><div class="field"><label for="addsub-name">Name (optional)</label><input type="text" id="addsub-name"></div></div>
+          <div class="btnrow" style="margin-top:.6rem"><button class="btn small alt" data-act="addsub">Add subscriber</button><button class="btn small alt" data-act="subscsv">Show list as CSV</button></div><div id="csvbox"></div></div>
+        <div class="panel"><h3>Write a reminder</h3>
+          <div class="field"><label for="mail-t">Start from a tournament</label><select id="mail-t" data-mail="tid"><option value="">Choose…</option>${upcoming.map((t) => `<option value="${esc(t.id)}" ${d.tid === t.id ? 'selected' : ''}>${esc(t.name)}: ${esc(fmtRange(t.start, t.end))}</option>`).join('')}</select><span class="help">Fills in the subject and message. You can change both.</span></div>
+          <div class="field"><label for="mail-subject">Subject</label><input type="text" id="mail-subject" data-mail="subject" value="${esc(d.subject)}"></div>
+          <div class="field"><label for="mail-text">Message</label><textarea id="mail-text" data-mail="text" rows="10">${esc(d.text)}</textarea><span class="help">Plain text. An unsubscribe link is added at the bottom automatically.</span></div>
+          <div class="row2"><div class="field"><label for="mail-test">Send a test to</label><input type="email" id="mail-test" data-mail="test" value="${esc(d.test)}"></div><div class="btnrow" style="align-items:end"><button class="btn alt" data-act="mailtest">Send test</button></div></div>
+          <div class="btnrow" style="margin-top:1rem">${pendingConfirm === 'sendall' ? `<div class="confirm" role="alert">Send this to all ${subs.length} subscribers? <button class="btn small green" data-act="mailall-yes">Yes, send</button><button class="btn small alt" data-act="cancel">Not yet</button></div>` : `<button class="btn green" data-act="mailall" ${subs.length ? '' : 'disabled'}>Send to all ${subs.length} subscribers</button>`}</div>
+          <p class="help">Resend's free plan sends 100 emails a day. With more subscribers than that, the rest are held and a "Continue sending" button appears below the next day.</p></div>
+        ${partial.length ? `<div class="panel"><h3>Unfinished sends</h3><ul>${partial.map((c) => `<li>${esc(c.subject)}: ${c.sent} sent, ${c.remaining} waiting <button class="btn small green" data-act="mailcontinue" data-id="${esc(c.id)}">Continue sending</button></li>`).join('')}</ul></div>` : ''}
+      </div>`;
+    },
+    accounts() {
+      if (accounts === null) { loadAccounts(); return '<h2>Editor accounts</h2><p>Loading accounts…</p>'; }
+      const u = editingUser;
+      const form = u ? `<div class="panel"><h3>${u.isNew ? 'New account' : 'Edit ' + esc(u.username)}</h3><div class="form">
+        <div class="row2"><div class="field"><label for="acc-username">Username</label><input type="text" id="acc-username" data-acc="username" value="${esc(u.username)}" ${u.isNew ? '' : 'readonly'} autocomplete="off"><span class="help">Lowercase letters and numbers, e.g. "ithaca".</span></div>
+        <div class="field"><label for="acc-name">Display name</label><input type="text" id="acc-name" data-acc="name" value="${esc(u.name)}"></div></div>
+        <div class="field"><label for="acc-role">What can they edit?</label><select id="acc-role" data-acc="role">${['editor', 'club', 'tournament'].map((r) => `<option value="${r}" ${u.role === r ? 'selected' : ''}>${ROLES[r].label}</option>`).join('')}</select></div>
+        ${u.role === 'club' ? `<fieldset class="field"><legend class="lbl">Clubs they manage</legend><div class="checks">${site.clubs.map((c) => `<label><input type="checkbox" data-accitem="clubs" value="${esc(c.id)}" ${u.clubs.includes(c.id) ? 'checked' : ''}> ${esc(c.name)}</label>`).join('')}</div></fieldset>` : ''}
+        ${u.role === 'tournament' ? `<fieldset class="field"><legend class="lbl">Tournaments they manage</legend><div class="checks">${site.tournaments.map((t) => `<label><input type="checkbox" data-accitem="tournaments" value="${esc(t.id)}" ${u.tournaments.includes(t.id) ? 'checked' : ''}> ${esc(t.name)} (${esc(fmtRange(t.start, t.end))})</label>`).join('')}</div></fieldset>` : ''}
+        <div class="field"><label for="acc-pw">${u.isNew ? 'Password (10+ characters)' : 'New password (leave blank to keep the current one)'}</label><input type="text" id="acc-pw" data-acc="password" value="${esc(u.password || '')}" autocomplete="off"><span class="help">Give this to them privately. They can change it after logging in.</span></div>
+        <div class="btnrow"><button class="btn green" data-act="acc-save">Save account</button><button class="btn alt" data-act="acc-cancel">Cancel</button></div></div></div>` : '';
+      const nm = (ids, list) => ids.map((id) => (site[list].find((x) => x.id === id) || {}).name).filter(Boolean).join(', ');
+      return `<h2>Editor accounts</h2><div class="form">
+        <p>Give helpers their own login. A club manager can change only their club's listing; a tournament chair only their tournaments. Accounts save right away; you don't need to press Save.</p>
+        ${mode === 'live' ? '' : '<div class="notice"><p>Demo copy: two example accounts are set up. Try logging in as <strong>ithaca</strong> / <strong>club112</strong> or <strong>rochester</strong> / <strong>chair112</strong> to see what they see.</p></div>'}
+        ${form}
+        <div class="tablewrap"><table><thead><tr><th scope="col">Username</th><th scope="col">Name</th><th scope="col">Can edit</th><th scope="col"><span class="sr">Actions</span></th></tr></thead><tbody>
+        ${accounts.map((a) => `<tr><td>${esc(a.username)}</td><td>${esc(a.name || '')}</td><td>${a.role === 'owner' ? 'Everything, including accounts' : a.role === 'editor' ? 'All content' : a.role === 'club' ? 'Club: ' + esc(nm(a.clubs || [], 'clubs') || 'none yet') : 'Tournaments: ' + esc(nm(a.tournaments || [], 'tournaments') || 'none yet')}</td>
+          <td>${a.role === 'owner' ? '' : pendingConfirm === 'acc-del:' + a.username ? `<span class="confirm">Delete? <button class="btn small danger" data-act="acc-del-yes" data-u="${esc(a.username)}">Yes</button><button class="btn small alt" data-act="cancel">No</button></span>` : `<div class="btnrow"><button class="btn small alt" data-act="acc-edit" data-u="${esc(a.username)}">Edit</button><button class="btn small danger" data-act="acc-del" data-u="${esc(a.username)}">Delete</button></div>`}</td></tr>`).join('')}
+        </tbody></table></div>
+        ${u ? '' : '<div class="btnrow"><button class="btn green" data-act="acc-new">Add an account</button></div>'}</div>`;
+    },
+    suggestions() {
+      if (sugg === null) { backend.suggestions().then((r) => { sugg = r; if (adminTab === 'suggestions') rerenderAdmin(); }).catch((e) => { sugg = { to: '', suggestions: [] }; toast(e.message); }); return '<h2>Website suggestions</h2><p>Loading…</p>'; }
+      const list = sugg.suggestions || [];
+      return `<h2>Website suggestions</h2><div class="form">
+        <p>Visitors can suggest changes with the form at the bottom of the Contact page. Each suggestion is saved here${mode === 'live' && sugg.emailReady ? ' and emailed to the address below' : ''}.</p>
+        ${mode !== 'live' ? '<div class="notice"><p>Demo copy: suggestions are saved in this browser only and not emailed. On the live site they are emailed once Resend is connected (README, step 9).</p></div>' : !sugg.emailReady ? '<div class="notice"><p>Email is not connected yet, so suggestions are only saved here. Connect Resend (README, step 9) to have them emailed.</p></div>' : ''}
+        <div class="panel"><h3>Where suggestions are emailed</h3>
+          <div class="field"><label for="sugg-to">Email address</label><input type="email" id="sugg-to" value="${esc(sugg.to)}" autocomplete="off"><span class="help">This address is never shown on the public site.</span></div>
+          <div class="btnrow" style="margin-top:.6rem"><button class="btn" data-act="sugg-to">Save address</button></div></div>
+        ${fieldHTML({ k: 'showSuggest', l: 'Show the suggestion form on the Contact page', t: 'check' }, 'settings')}
+        <div class="row2">${fieldHTML({ k: 'suggestTitle', l: 'Form heading' }, 'content')}${fieldHTML({ k: 'suggestText', l: 'Form introduction' }, 'content')}</div>
+        <p class="help">Press Save changes after changing the checkbox, heading or introduction.</p>
+        <h3>Received (${list.length})</h3>
+        ${list.length ? `<ul class="suggestions">${list.map((x) => `<li class="panel"><div class="muted">${esc(new Date(x.date).toLocaleString())}${x.page ? ' · ' + esc(x.page) : ''}</div>
+          <p style="white-space:pre-wrap;margin:.4rem 0">${esc(x.message)}</p>
+          <div>${esc(x.name || 'No name given')}${x.email ? ` · <a href="mailto:${esc(x.email)}">${esc(x.email)}</a>` : ''}</div>
+          <div class="btnrow" style="margin-top:.5rem">${pendingConfirm === 'sugg-del:' + x.key ? `<span class="confirm">Delete this suggestion? <button class="btn small danger" data-act="sugg-del-yes" data-key="${esc(x.key)}">Yes</button><button class="btn small alt" data-act="cancel">No</button></span>` : `<button class="btn small danger" data-act="sugg-del" data-key="${esc(x.key)}">Delete</button>`}</div></li>`).join('')}</ul>` : '<p class="empty">No suggestions yet.</p>'}
+      </div>`;
+    },
+    password() { return `<h2>My password</h2><div class="form">${passwordPanel()}</div>`; },
+    backup() {
+      const live = mode === 'live';
+      return `<h2>Backup, password & handoff</h2><div class="form">
+        <div class="panel"><h3>Download a backup</h3><p>Everything on the site (text, tournaments, clubs, colors, logos, photos) is one backup file. Keep a copy after big changes and give it to the next webmaster.</p>
+          <div class="btnrow"><button class="btn" data-act="export">Download backup file</button><button class="btn alt" data-act="showjson">Show backup as text</button></div>
+          <div id="jsonbox"></div></div>
+        <div class="panel"><h3>Restore from a backup</h3><p>Loads a backup into the editor. Nothing changes on the public site until you press Save.</p>
+          <div class="field"><label for="importfile">Backup file (.json)</label><input type="file" id="importfile" accept=".json,application/json"></div>
+          <div class="field"><label for="importtext">…or paste backup text</label><textarea id="importtext" rows="4"></textarea></div>
+          <div class="btnrow"><button class="btn alt" data-act="import">Load this backup</button></div>
+          ${live ? '<h3 style="margin-top:1.25rem">Automatic server backups</h3><p class="help">The server keeps a copy every time anyone saves, for 90 days.</p><div id="serverbackups"><button class="btn small alt" data-act="listbackups">Show saved versions</button></div>' : ''}</div>
+        ${passwordPanel()}
+        <div class="panel"><h3>Visitor numbers</h3><p>Turn on Cloudflare Web Analytics for the site (README, step 10) to see how many people visit and which pages they read. It is free and does not track individual visitors.</p></div>
+        <div class="panel"><h3>Handing the site to someone else</h3><ol class="rich">
+          <li>Download a backup file (above) and send it to the new webmaster.</li>
+          <li>Change the password here and give them the new one.</li>
+          <li>For full control, add them to the hosting account as an owner. The README in the site folder has the steps.</li></ol></div>
+        <div class="panel"><h3>Start over</h3><p>Replace everything with the original starting content.</p>
+          ${pendingConfirm === 'reset' ? '<div class="confirm" role="alert">Replace all content in the editor? <button class="btn small danger" data-act="reset-yes">Yes, start over</button><button class="btn small alt" data-act="cancel">Cancel</button></div>' : '<button class="btn danger" data-act="reset">Reset to starting content</button>'}</div>
+      </div>`;
+    },
+  };
+
+  async function loadAccounts() { try { accounts = await backend.listUsers(); } catch (e) { accounts = []; toast(e.message); } if (adminTab === 'accounts') rerenderAdmin(); }
+  async function loadSubs() {
+    try { subs = await backend.listSubs(); campaignList = await backend.campaigns(); } catch (e) { subs = []; toast(e.message); }
+    if (adminTab === 'email') rerenderAdmin();
+  }
+  function reminderFor(t) {
+    const L = tLinks(t), base = mode === 'live' ? location.origin : '';
+    const lines = [`${t.name}`, `${fmtRange(t.start, t.end)}${t.city ? ' · ' + t.city : ''}`, ''];
+    if (t.venue || t.address) lines.push('Where: ' + [t.venue, t.address, t.city].filter(Boolean).join(', '));
+    if (t.notes) lines.push(t.notes);
+    const s = (t.sessions || []).slice().sort((a, b) => ((a.date || '') + (a.time || '')).localeCompare((b.date || '') + (b.time || '')));
+    if (s.length) { lines.push('', 'Schedule:'); s.forEach((x) => { const d = parseDate(x.date); lines.push(`  ${d ? DAYS[d.getDay()] : ''} ${fmtTime(x.time)}  ${x.event}`); }); }
+    if (t.partnership) lines.push('', 'Need a partner? ' + stripMd(t.partnership).replace(/\s+/g, ' ').trim());
+    lines.push('');
+    if (L.flyer) lines.push(L.flyerLabel + ': ' + L.flyer);
+    if (hasDetails(t) && base) lines.push('Details: ' + base + '/#t-' + t.id);
+    lines.push('', 'We hope to see you there!', site.settings.siteName);
+    return { subject: `Reminder: ${t.name}, ${fmtRange(t.start, t.end)}`, text: lines.join('\n') };
+  }
+
+  function renderAdmin() {
+    if (!token) {
+      return `<div class="login panel"><h1>Webmaster login</h1>
+        <form id="loginform" class="form"><div class="field"><label for="un">Username</label><input type="text" id="un" autocomplete="username" value="webmaster" autocapitalize="none"></div>
+        <div class="field"><label for="pw">Password</label><input type="password" id="pw" autocomplete="current-password" required></div>
+        <div id="loginerr" role="alert"></div><button class="btn" type="submit">Log in</button></form>
+        ${mode === 'demo' ? `<div class="notice" style="margin-top:1rem"><p>Demo copy: log in as <strong>webmaster</strong> with password <strong>${DEMO_PASSWORD}</strong>. Example helper logins: <strong>ithaca</strong> / <strong>club112</strong> (club manager) and <strong>rochester</strong> / <strong>chair112</strong> (tournament chair). Changes are saved in this browser only.</p></div>` : ''}</div>`;
+    }
+    const tabs = myTabs();
+    if (!tabs.find((t) => t[0] === adminTab)) adminTab = tabs[0][0];
+    const body = ADMIN_TABS[adminTab]();
+    openAfterAdd = null;
+    const leave = pendingConfirm === 'logout' ? `<div class="confirm" role="alert" style="margin-bottom:1rem">You have unsaved changes. <button class="btn small green" data-act="save-logout">Save and log out</button><button class="btn small danger" data-act="discard-logout">Log out without saving</button><button class="btn small alt" data-act="cancel">Stay</button></div>` : '';
+    return `${leave}<div class="admin"><div class="admin-tabs" role="tablist" aria-label="Admin sections">${tabs.map(([k, l]) => `<button role="tab" aria-selected="${k === adminTab}" data-act="tab" data-tab="${k}">${l}</button>`).join('')}</div>
+      <section class="panel" role="tabpanel" aria-label="${esc((tabs.find((t) => t[0] === adminTab) || [])[1])}">${body}
+      ${['accounts', 'email', 'password'].includes(adminTab) ? '' : '<div class="btnrow" style="margin-top:1.5rem;border-top:1px solid var(--line);padding-top:1rem"><button class="btn green" data-act="save">Save changes</button><a class="btn alt" href="#home">View the site</a></div>'}</section></div>`;
+  }
+  function rerenderAdmin(keepOpen = true) {
+    if (route() !== 'admin') return;
+    const y = window.scrollY;
+    const open = keepOpen ? [...document.querySelectorAll('details.item[open] [data-sum]')].map((e) => e.dataset.sum) : [];
+    $('#view').innerHTML = renderAdmin();
+    open.forEach((k) => { const s = document.querySelector(`[data-sum="${k}"]`); if (s) s.closest('details').open = true; });
+    window.scrollTo(0, y);
+  }
+
+  // ---- admin clicks ----
+  async function adminClick(b, act, e) {
+    const list = b.dataset.list, i = +b.dataset.i;
+    switch (act) {
+      case 'tab': adminTab = b.dataset.tab; pendingDelete = null; pendingConfirm = null; editingUser = null; rerenderAdmin(false); $('.admin-tabs [aria-selected="true"]').focus(); if (window.innerWidth < 900) $('[role=tabpanel]').scrollIntoView(); return;
+      case 'add': { const arr = getPath(list); const it = Object.assign({ id: uid('x') }, SCHEMAS[b.dataset.schema].blank()); arr.push(it); openAfterAdd = { list, i: arr.length - 1 }; markDirty(); rerenderAdmin(); const f = document.querySelectorAll('details.item[open] input, details.item[open] textarea'); if (f.length) f[0].focus(); return; }
+      case 'up': case 'down': { const arr = getPath(list), j = act === 'up' ? i - 1 : i + 1; if (j < 0 || j >= arr.length) return; [arr[i], arr[j]] = [arr[j], arr[i]]; markDirty(); const sm = document.querySelector(`[data-sum="${list}.${i}"]`), wasOpen = sm && sm.closest('details').open; rerenderAdmin(false); if (wasOpen) { const n = document.querySelector(`[data-sum="${list}.${j}"]`); if (n) n.closest('details').open = true; } const mv = document.querySelector(`[data-act="${act}"][data-list="${list}"][data-i="${j}"]`); if (mv && !mv.disabled) mv.focus(); if (list === 'pages') renderChrome(); return; }
+      case 'del': pendingDelete = list + '|' + i; rerenderAdmin(); return;
+      case 'del-no': pendingDelete = null; rerenderAdmin(); return;
+      case 'del-yes': getPath(list).splice(i, 1); pendingDelete = null; markDirty(); rerenderAdmin(false); if (list === 'pages') renderChrome(); toast('Deleted. Press Save to update the site.'); return;
+      case 'subadd': { const arr = getPath(b.dataset.path); arr.push(JSON.parse(b.dataset.blank)); markDirty(); rerenderAdmin(); const rows = document.querySelectorAll(`[data-path^="${b.dataset.path}.${arr.length - 1}."]`); if (rows.length) rows[0].focus(); return; }
+      case 'subdel': getPath(b.dataset.path).splice(i, 1); markDirty(); rerenderAdmin(); return;
+      case 'sortlist': getPath(list).sort(byStart); markDirty(); rerenderAdmin(); return;
+      case 'addpage': site.pages.push({ id: uid('page-'), title: 'New page', show: true, custom: true, body: '## Heading\nWrite your text here.' }); markDirty(); renderChrome(); rerenderAdmin(); toast('Page added. Rename it here and write its text on the Page text tab.'); return;
+      case 'preset': site.settings.colors = Object.assign({}, PRESETS[b.dataset.name]); markDirty(); applyTheme(); rerenderAdmin(); return;
+      case 'clearfield': setPath(b.dataset.path, ''); markDirty(); rerenderAdmin(); renderChrome(); return;
+      case 'export': {
+        const blob = new Blob([JSON.stringify(site, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'unit112-site-backup-' + todayISO() + '.json';
+        document.body.appendChild(a); a.click(); a.remove();
+        toast('If no file downloaded, use "Show backup as text" and copy it.'); return;
+      }
+      case 'showjson': $('#jsonbox').innerHTML = `<div class="field" style="margin-top:1rem"><label for="jsontext">Backup text</label><textarea id="jsontext" rows="8" readonly>${esc(JSON.stringify(site, null, 2))}</textarea></div><button class="btn small alt" data-act="copyjson">Copy to clipboard</button>`; return;
+      case 'copyjson': { const t = $('#jsontext'); try { await navigator.clipboard.writeText(t.value); toast('Copied.'); } catch (err) { t.focus(); t.select(); toast('Press Ctrl+C (or ⌘C) to copy the selected text.'); } return; }
+      case 'import': {
+        let text = $('#importtext').value.trim();
+        const f = $('#importfile').files[0];
+        if (f) text = await f.text();
+        const j = safe(() => JSON.parse(text), null);
+        if (!j || !j.settings || !Array.isArray(j.pages)) { toast('That is not a Unit 112 backup file.'); return; }
+        site = j; markDirty(); applyTheme(); render(); toast('Backup loaded. Press Save to publish it.'); return;
+      }
+      case 'listbackups': {
+        const bl = await backend.listBackups();
+        $('#serverbackups').innerHTML = bl.length ? `<ul>${bl.map((k) => `<li>${esc(new Date(k.time).toLocaleString())} <button class="btn small alt" data-act="loadbackup" data-key="${esc(k.key)}">Load</button></li>`).join('')}</ul>` : '<p class="empty">No saved versions yet.</p>';
+        return;
+      }
+      case 'loadbackup': try { site = await backend.getBackup(b.dataset.key); markDirty(); applyTheme(); render(); toast('Older version loaded. Press Save to publish it.'); } catch (err) { toast(err.message); } return;
+      case 'changepw': {
+        const cur = $('#pw-cur').value, nx = $('#pw-new').value;
+        if (nx.length < 10) { toast('Use at least 10 characters for the new password.'); return; }
+        try { await backend.changePassword(cur, nx); $('#pw-cur').value = ''; $('#pw-new').value = ''; toast('Password changed.'); } catch (err) { toast(err.message); }
+        return;
+      }
+      // accounts
+      case 'acc-new': editingUser = { isNew: true, username: '', name: '', role: 'club', clubs: [], tournaments: [], password: '' }; rerenderAdmin(); $('#acc-username').focus(); return;
+      case 'acc-edit': { const a = accounts.find((x) => x.username === b.dataset.u); editingUser = Object.assign({ clubs: [], tournaments: [] }, clone(a), { password: '' }); rerenderAdmin(); $('#acc-name').focus(); return; }
+      case 'acc-cancel': editingUser = null; rerenderAdmin(); return;
+      case 'acc-save': {
+        const u = editingUser;
+        u.username = (u.username || '').trim().toLowerCase();
+        if (!/^[a-z0-9._-]{3,30}$/.test(u.username)) { toast('Username: 3–30 lowercase letters or numbers.'); return; }
+        if (u.isNew && accounts.find((a) => a.username === u.username)) { toast('That username is taken.'); return; }
+        if ((u.isNew || u.password) && (u.password || '').length < (mode === 'live' ? 10 : 4)) { toast('Use at least 10 characters for the password.'); return; }
+        try { await backend.saveUser({ username: u.username, name: u.name || u.username, role: u.role, clubs: u.role === 'club' ? u.clubs : [], tournaments: u.role === 'tournament' ? u.tournaments : [], password: u.password || undefined }); editingUser = null; accounts = null; toast('Account saved.'); rerenderAdmin(); }
+        catch (err) { toast(err.message); }
+        return;
+      }
+      case 'acc-del': pendingConfirm = 'acc-del:' + b.dataset.u; rerenderAdmin(); return;
+      case 'acc-del-yes': try { await backend.deleteUser(b.dataset.u); pendingConfirm = null; accounts = null; rerenderAdmin(); toast('Account deleted.'); } catch (err) { toast(err.message); } return;
+      // email
+      case 'unsub': try { await backend.removeSub(b.dataset.email); subs = null; rerenderAdmin(); toast('Removed.'); } catch (err) { toast(err.message); } return;
+      case 'addsub': { const em = $('#addsub-email').value.trim(); if (!validEmail(em)) { toast('Enter a full email address.'); return; } try { await backend.addSub(em, $('#addsub-name').value.trim()); subs = null; rerenderAdmin(); toast('Subscriber added.'); } catch (err) { toast(err.message); } return; }
+      case 'subscsv': { const csv = 'email,name,since\n' + subs.map((s) => [s.email, s.name || '', s.date || ''].map((v) => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n'); $('#csvbox').innerHTML = `<div class="field" style="margin-top:1rem"><label for="csvtext">Subscribers (CSV)</label><textarea id="csvtext" rows="6" readonly>${esc(csv)}</textarea></div>`; $('#csvtext').select(); return; }
+      case 'mailtest': case 'mailall': case 'mailall-yes': case 'mailcontinue': {
+        const d = mailDraft || {};
+        if (act !== 'mailcontinue' && (!d.subject || !d.text)) { toast('Write a subject and a message first.'); return; }
+        if (act === 'mailtest' && !validEmail(d.test)) { toast('Enter the address to send the test to.'); return; }
+        if (act === 'mailall') { pendingConfirm = 'sendall'; rerenderAdmin(); return; }
+        pendingConfirm = null;
+        try {
+          const r = await backend.send(act === 'mailtest' ? { subject: '[TEST] ' + d.subject, text: d.text, test: d.test } : act === 'mailcontinue' ? { continueId: b.dataset.id } : { subject: d.subject, text: d.text });
+          toast(act === 'mailtest' ? 'Test sent to ' + d.test + '.' : `Sent to ${r.sent}.${r.remaining ? ' ' + r.remaining + ' will need "Continue sending" tomorrow.' : ''}`);
+          if (act !== 'mailtest') { subs = null; rerenderAdmin(); }
+        } catch (err) { toast(err.message); rerenderAdmin(); }
+        return;
+      }
+      case 'sugg-to': { const to = $('#sugg-to').value.trim(); if (!validEmail(to)) { toast('Enter a full email address, like name@example.com.'); return; } try { await backend.setSuggestTo(to); sugg.to = to; toast('Suggestions will now go to ' + to + '.'); } catch (err) { toast(err.message); } return; }
+      case 'sugg-del': pendingConfirm = 'sugg-del:' + b.dataset.key; rerenderAdmin(); return;
+      case 'sugg-del-yes': try { await backend.deleteSuggestion(b.dataset.key); pendingConfirm = null; sugg = null; rerenderAdmin(); toast('Deleted.'); } catch (err) { toast(err.message); } return;
+      case 'reset': pendingConfirm = 'reset'; rerenderAdmin(); return;
+      case 'reset-yes': site = clone(window.DEFAULT_SITE); pendingConfirm = null; markDirty(); applyTheme(); render(); toast('Starting content loaded. Press Save to publish it.'); return;
+      case 'cancel': pendingConfirm = null; rerenderAdmin(); return;
+      case 'save-logout': await doSave(); if (!dirty) { pendingConfirm = null; logout(); location.hash = '#home'; } return;
+      case 'discard-logout': pendingConfirm = null; dirty = false; site = await backend.load(); applyTheme(); logout(); location.hash = '#home'; return;
+    }
+    void e;
+  }
+
+  // ---- admin typing ----
+  function onEdit(e) {
+    const el = e.target, ds = el.dataset || {};
+    if (ds.acc && editingUser) { editingUser[ds.acc] = el.value; if (ds.acc === 'role' && e.type === 'change') rerenderAdmin(); return; }
+    if (ds.accitem && editingUser) { const arr = editingUser[ds.accitem]; const k = arr.indexOf(el.value); if (el.checked && k < 0) arr.push(el.value); if (!el.checked && k >= 0) arr.splice(k, 1); return; }
+    if (ds.mail) {
+      mailDraft = mailDraft || { tid: '', subject: '', text: '', test: '' };
+      mailDraft[ds.mail] = el.value;
+      if (ds.mail === 'tid' && e.type === 'change') { const t = site.tournaments.find((x) => x.id === el.value); if (t) Object.assign(mailDraft, reminderFor(t)); rerenderAdmin(); }
+      return;
+    }
+    const path = ds.path;
+    if (!path) return;
+    let v = el.type === 'checkbox' ? el.checked : el.value;
+    if (path === 'settings.baseSize') v = +v;
+    setPath(path, v);
+    markDirty();
+    if (path.startsWith('settings.colors') || path === 'settings.font' || path === 'settings.headingFont' || path === 'settings.baseSize') {
+      applyTheme();
+      if (el.type === 'color') { const code = el.parentElement.querySelector('code'); if (code) code.textContent = v; }
+      if (e.type === 'change' && path.startsWith('settings.colors')) rerenderAdmin();
+    }
+    if (/^settings\.(siteName|tagline|headerStyle|showSuits|footerText|contactEmail|alert\.)/.test(path) || /^pages\.\d+\.(title|show)$/.test(path)) renderChrome();
+    const m = /^(.+?)\.(\d+)\./.exec(path);
+    if (m) {
+      const sum = document.querySelector(`[data-sum="${m[1]}.${m[2]}"]`);
+      if (sum) { const S = SCHEMAS[sum.dataset.schema], it = getPath(m[1] + '.' + m[2]); sum.textContent = S.title(it); const sub = document.querySelector(`[data-subsum="${m[1]}.${m[2]}"]`); if (sub) sub.textContent = S.sub(it); }
+      const d = document.getElementById(`derived-${m[1].replace(/\./g, '-')}-${m[2]}`);
+      if (d) d.innerHTML = derivedHTML(m[1], +m[2]);
+    }
+  }
+  document.addEventListener('input', onEdit);
+  document.addEventListener('change', async (e) => {
+    const el = e.target;
+    if (el.dataset && el.dataset.upload) {
+      const f = el.files[0]; if (!f) return;
+      toast('Uploading…');
+      try { const url = await backend.upload(f, el.dataset.kind); setPath(el.dataset.upload, url); markDirty(); rerenderAdmin(); renderChrome(); toast('Uploaded. Press Save to update the site.'); }
+      catch (err) { toast(err.message); }
+      return;
+    }
+    if (el.dataset && el.dataset.multi) {
+      const files = [...el.files]; if (!files.length) return;
+      const arr = getPath(el.dataset.multi); let n = 0;
+      for (const f of files) {
+        toast(`Uploading photo ${n + 1} of ${files.length}…`);
+        try { arr.push({ id: uid('ph'), url: await backend.upload(f, 'photo'), caption: '' }); n++; } catch (err) { toast(err.message); break; }
+      }
+      markDirty(); rerenderAdmin(); if (n) toast(`${n} photo${n === 1 ? '' : 's'} added. Add captions, then press Save.`);
+      return;
+    }
+    if (el.type === 'color' || el.tagName === 'SELECT' || el.type === 'checkbox') onEdit(e);
+  });
+  document.addEventListener('submit', async (e) => {
+    if (e.target.id !== 'loginform') return;
+    e.preventDefault();
+    let ok = false;
+    try { ok = await backend.login($('#un').value, $('#pw').value); } catch (err) { $('#loginerr').innerHTML = `<p style="color:#9B1C1C;font-weight:700">${esc(err.message)}</p>`; return; }
+    if (ok) { accounts = null; subs = null; sugg = null; adminTab = myTabs()[0][0]; render(); toast('Logged in as ' + (user.name || user.username) + '.'); }
+    else { $('#loginerr').innerHTML = '<p style="color:#9B1C1C;font-weight:700">That username or password is not correct. Check Caps Lock and try again.</p>'; $('#pw').select(); }
+  });
+
+
+  // ---------- global events ----------
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    const act = b.dataset.act;
+    if (act === 'size') { ls.set('u112-size', b.dataset.i); applyTheme(); renderChrome(); return; }
+    if (act === 'hc') { ls.set('u112-hc', ls.get('u112-hc') === '1' ? '0' : '1'); applyTheme(); renderChrome(); return; }
+    if (act === 'skip') { e.preventDefault(); $('#main').focus(); return; }
+    if (act === 'clubday') { clubDay = b.dataset.day; $('#view').innerHTML = renderPublic('clubs'); const f = document.querySelector(`[data-act="clubday"][data-day="${clubDay}"]`); if (f) f.focus(); return; }
+    if (act === 'photo') { lightbox = { album: b.dataset.album, i: +b.dataset.i, from: b }; renderLightbox(); return; }
+    if (act === 'lb-close') { const from = lightbox && lightbox.from; lightbox = null; renderLightbox(); if (from && document.body.contains(from)) from.focus(); return; }
+    if (act === 'lb-prev' || act === 'lb-next') { lightbox.i += act === 'lb-next' ? 1 : -1; renderLightbox(); return; }
+    if (act === 'logout') { if (dirty) { pendingConfirm = 'logout'; location.hash = '#admin'; render(); return; } logout(); location.hash = '#home'; return; }
+    if (act === 'save') { await doSave(); return; }
+    if (typeof adminClick === 'function') adminClick(b, act, e);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox) return;
+    const al = (site.gallery || []).find((a) => a.id === lightbox.album);
+    if (e.key === 'Escape') { lightbox = null; renderLightbox(); }
+    else if (e.key === 'ArrowRight' && al && lightbox.i < al.photos.length - 1) { lightbox.i++; renderLightbox(); }
+    else if (e.key === 'ArrowLeft' && lightbox.i > 0) { lightbox.i--; renderLightbox(); }
+  });
+  document.addEventListener('submit', async (e) => {
+    const f = e.target;
+    if (f.id === 'searchform' || f.id === 'searchform2') {
+      e.preventDefault();
+      searchQuery = (f.querySelector('input[type=search]').value || '').trim();
+      if (route() === 'search') { render(); const q2 = $('#q2'); if (q2) { q2.focus(); } } else location.hash = '#search';
+      return;
+    }
+    if (f.id === 'suggestform') {
+      e.preventDefault();
+      const msgEl = $('#suggestmsg'), message = $('#sg-msg').value.trim(), email = $('#sg-email').value.trim();
+      if (message.length < 3) { msgEl.innerHTML = '<p class="formerr">Please write your suggestion first.</p>'; $('#sg-msg').focus(); return; }
+      if (email && !validEmail(email)) { msgEl.innerHTML = '<p class="formerr">That email address does not look right. Leave it blank if you don\'t need a reply.</p>'; $('#sg-email').focus(); return; }
+      const btn = f.querySelector('button[type=submit]'); btn.disabled = true;
+      try {
+        await backend.suggest({ message, page: $('#sg-page').value, name: $('#sg-name').value.trim(), email, website: $('#sg-web').value });
+        f.hidden = true; msgEl.innerHTML = `<p class="formok">Thank you! Your suggestion was sent to the webmaster.${email ? ' They may reply to ' + esc(email) + '.' : ''}</p>`; msgEl.focus && msgEl.setAttribute('tabindex', '-1'); msgEl.focus();
+      } catch (err) { btn.disabled = false; msgEl.innerHTML = `<p class="formerr">${esc(err.message)}</p>`; }
+      return;
+    }
+    if (f.id === 'signupform') {
+      e.preventDefault();
+      const email = $('#su-email').value.trim(), name = $('#su-name').value.trim(), msg = $('#signupmsg');
+      if (!validEmail(email)) { msg.innerHTML = '<p class="formerr">Please enter a full email address, like name@example.com.</p>'; $('#su-email').focus(); return; }
+      try { await backend.subscribe(email, name, $('#su-web').value); f.hidden = true; msg.innerHTML = `<p class="formok">Thank you. Reminders will go to <strong>${esc(email)}</strong>.</p>`; }
+      catch (err) { msg.innerHTML = `<p class="formerr">${esc(err.message)}</p>`; }
+    }
+  });
+  async function doSave() {
+    try { await backend.save(site); dirty = false; renderChrome(); toast('Saved. The site is updated.'); }
+    catch (err) { toast(err.message); }
+  }
+  window.addEventListener('beforeunload', (e) => { if (dirty) { e.preventDefault(); e.returnValue = ''; } });
+
+  // ---------- boot ----------
+  (async function boot() {
+    site = await backend.load();
+    // fill any keys added in newer versions
+    const D = window.DEFAULT_SITE;
+    site.settings = Object.assign(clone(D.settings), site.settings || {});
+    site.content = Object.assign(clone(D.content), site.content || {});
+    site.recognition = Object.assign(clone(D.recognition), site.recognition || {});
+    ['news', 'tournaments', 'clubs', 'board', 'documents', 'pages', 'gallery'].forEach((k) => { if (!Array.isArray(site[k])) site[k] = clone(D[k]); });
+    site.learn = Object.assign(clone(D.learn), site.learn || {});
+    site.settings.alert = Object.assign(clone(D.settings.alert), site.settings.alert || {});
+    // Sections and built-in pages added in later versions of the site
+    D.settings.homeSections.forEach((h, i) => { if (!site.settings.homeSections.find((x) => x.id === h.id)) site.settings.homeSections.splice(Math.min(i, site.settings.homeSections.length), 0, clone(h)); });
+    D.pages.forEach((p, i) => { if (!site.pages.find((x) => x.id === p.id)) site.pages.splice(Math.min(i, site.pages.length), 0, clone(p)); });
+    const T0 = { address: '', sessions: [], hotels: '', food: '', parking: '', partnership: '', contacts: '', details: '', bulletins: [] };
+    ['tournaments', 'clubs', 'news', 'board', 'documents', 'gallery'].forEach((k) => site[k].forEach((it) => { if (!it.id) it.id = uid('x'); }));
+    site.tournaments.forEach((t) => { Object.keys(T0).forEach((k) => { if (t[k] == null) t[k] = clone(T0[k]); }); });
+    site.clubs.forEach((c) => { if (!Array.isArray(c.games)) c.games = []; });
+    site.gallery.forEach((a) => { if (!Array.isArray(a.photos)) a.photos = []; });
+    if ((token === 'demo' && mode === 'live') || (token && !user)) { token = null; user = null; ss.del('u112-token'); ss.del('u112-user'); }
+    applyTheme();
+    render();
+  })();
+})();
+
+</script>
+</body>
+</html>

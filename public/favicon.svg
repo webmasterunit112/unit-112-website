@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<defs><clipPath id="r"><rect width="64" height="64" rx="13"/></clipPath></defs>
+<g clip-path="url(#r)"><rect width="64" height="64" fill="#1C4966"/><rect y="54" width="64" height="10" fill="#2F6B4F"/></g>
+<text x="32" y="36" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, 'DejaVu Serif', serif" font-weight="700" font-size="28" fill="#FFFFFF">112</text>
+</svg>
